@@ -18,6 +18,7 @@
 .hero__content-wrapper {
   color: $basic-white;
   display: grid;
+  justify-content: center;
   grid-template-areas:
     "list title"
     "link link";
@@ -37,5 +38,17 @@
     padding: 0 0 100px;
     row-gap: 0;
     column-gap: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 26px 0 116px;
+    grid-template-areas:
+      ". . . image"
+      "list title . image"
+      "list . . image"
+      "list link . image"
+      ". . . image";
+    grid-template-columns: 190px 270px 56px 500px;
+    grid-template-rows: 31px auto 40px 66px 56px;
   }
 }

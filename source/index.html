@@ -19,23 +19,36 @@
       <h1 class="visually-hidden">Фитнес-центр SUPERGYM</h1>
       <div class="hero__container container">
         <header class="hero__header hero-header">
+          <a href="#" class="hero-header__logo logo">
             <picture>
-              <source media="(min-width: 1366px)" srcset="./img/logo.svg" width="130" height="26">
-              <source media="(min-width: 768px)" srcset="./img/logo.svg" width="110" height="22">
-              <img class="hero-header__logo logo" src="./img/logo.svg" alt="Логотип SyperGym." width="100" height="20">
+              <source media="(min-width: 1366px)" srcset="./img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+              <img class="hero-header__logo logo" src="./img/logo.svg" alt="Логотип SyperGym.">
             </picture>
+          </a>
           <a class="hero-header__phone-link" href="tel:+78005555555">8 800 555-55-55</a>
         </header>
         <div class="hero__content-wrapper hero-content">
+
           <h2 class="hero-content__title">
-            <span class="hero-content__subtitle">Омск</span>Фитнес<br>центр</h2>
+            <span class="hero-content__subtitle">Омск</span>Фитнес<br>центр
+          </h2>
+
           <ul class="hero-content__list">
             <li class="hero-content__item">Тренажёрный зал</li>
             <li class="hero-content__item">Групповые занятия</li>
             <li class="hero-content__item">Кардио-зона</li>
           </ul>
-          <img class="hero-content__image" src="./img/hero-img.jpg" alt="Накачанный мужчина в фитнес зале.">
+
+          <div class="hero-content__image">
+            <picture>
+              <source media="(min-width: 1366px)" srcset="./img/hero-img-desktop.jpg" width="500" height="524">
+              <img src="./img/hero-img.jpg" alt="Накачанный супермен." width="324" height="390">
+            </picture>
+          </div>
+
           <a href="#" class="hero-content__link">Купить абонемент</a>
+
         </div>
       </div>
     </div>
