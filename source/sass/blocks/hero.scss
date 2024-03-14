@@ -1,0 +1,11 @@
+.hero {
+  background: $background-home-screen;
+  width: 100%;
+  min-height: 412px;
+}
+
+.hero__header {
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+}

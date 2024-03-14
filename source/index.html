@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-validate="html">
+<html class="page" lang="ru" data-validate="html">
 
   <head>
     <meta charset="UTF-8">
@@ -10,12 +10,25 @@
 
   <body class="page-body">
     <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
+      <!--     <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
     <svg>
       <use href="/__spritemap#sprite-user"></use>
-    </svg>
+    </svg> -->
+
+    <section class="hero" data-test="hero">
+      <div class="hero__container container">
+        <header class="hero__header hero-header">
+            <picture>
+              <!-- <source media="(min-width: 1366px)" srcset="img/logo-desktop.svg" width="71" height="60">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="61" height="50"> -->
+              <img class="hero-header__logo logo" src="./img/logo.svg" alt="Логотип SyperGym." width="100" height="20">
+            </picture>
+          <a class="hero-header__phone-link" href="tel:+78005555555">8 800 555-55-55</a>
+        </header>
+      </div>
+    </section>
+
     <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
     <div data-test="about">about</div>
     <div data-test="price">price</div>
     <div data-test="games">games</div>
