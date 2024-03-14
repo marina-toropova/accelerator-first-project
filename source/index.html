@@ -19,11 +19,13 @@
       <h1 class="visually-hidden">Фитнес-центр SUPERGYM</h1>
       <div class="hero__container container">
         <header class="hero__header hero-header">
-          <a href="#" class="hero-header__logo logo">
+          <a class="hero-header__logo logo" href="#">
             <picture>
-              <source media="(min-width: 1366px)" srcset="./img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+              <source type="image/svg+xml" media="(min-width: 1366px)" srcset="./img/logo-desktop.svg">
+              <source type="image/svg+xml" media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+              <!-- linthtml-disable -->
               <img class="hero-header__logo logo" src="./img/logo.svg" alt="Логотип SyperGym.">
+              <!-- linthtml-enable -->
             </picture>
           </a>
           <a class="hero-header__phone-link" href="tel:+78005555555">8 800 555-55-55</a>
@@ -42,12 +44,12 @@
 
           <div class="hero-content__image">
             <picture>
-              <source media="(min-width: 1366px)" srcset="./img/hero-img-desktop.jpg" width="500" height="524">
+              <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/hero-img-desktop.jpg" width="500" height="524">
               <img src="./img/hero-img.jpg" alt="Накачанный супермен." width="324" height="390">
             </picture>
           </div>
 
-          <a href="#" class="hero-content__link">Купить абонемент</a>
+          <a class="hero-content__link" href="#">Купить абонемент</a>
 
         </div>
       </div>

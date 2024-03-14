@@ -28,11 +28,11 @@
 
   @media (min-width: $tablet) {
     grid-template-areas:
-      ". . . . image"
+      ".    . .     . image"
       "list . title . image"
-      "list . . . image"
-      "list . link . image"
-      ". . . . image";
+      "list . .     . image"
+      "list . link  . image"
+      ".    . .     . image";
     grid-template-columns: 113px 26px 185px 30px 324px;
     grid-template-rows: 31px auto auto 56px 31px;
     padding: 0 0 100px;
@@ -43,11 +43,11 @@
   @media (min-width: $desktop) {
     padding: 26px 0 116px;
     grid-template-areas:
-      ". . . image"
+      ".    .     . image"
       "list title . image"
-      "list . . image"
-      "list link . image"
-      ". . . image";
+      "list .     . image"
+      "list link  . image"
+      ".    .     . image";
     grid-template-columns: 190px 270px 56px 500px;
     grid-template-rows: 31px auto 40px 66px 56px;
   }
