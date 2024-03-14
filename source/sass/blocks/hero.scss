@@ -10,3 +10,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+.hero__content-wrapper {
+  color: $basic-white;
+  display: grid;
+  grid-template-areas:
+    "list title"
+    "link link";
+  row-gap: 48px;
+  column-gap: 21px;
+  padding: 48px 0 32px;
+}

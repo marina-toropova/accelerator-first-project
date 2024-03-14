@@ -9,6 +9,14 @@
 @font-face {
   font-family: "Alumni Sans";
   font-style: normal;
+  font-weight: 600;
+  src: url("../../fonts/AlumniSans/AlumniSans-SemiBold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alumni Sans";
+  font-style: normal;
   font-weight: 400;
   src: url("../../fonts/AlumniSans/alumniSans-regular.woff2") format("woff2");
   font-display: swap;
