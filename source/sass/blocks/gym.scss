@@ -1,0 +1,174 @@
+.gym__container {
+  padding: 40px 0;
+
+  @media (min-width: $tablet) {
+    padding: 60px 0 120px;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    position: relative;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 120px 0 240px;
+    text-align: left;
+    grid-template-columns: 355px 145px 660px;
+    grid-template-rows: auto 15px auto 86px auto auto;
+    grid-template-areas:
+      "title . photo"
+      ". . photo"
+      "subtitle . photo"
+      ". . photo"
+      "text-first . photo"
+      "text-second . photo";
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 22px;
+
+    @media (min-width: $tablet) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 355px;
+    }
+  }
+
+  p:first-of-type {
+    margin: 36px 0;
+
+    @media (min-width: $tablet) {
+      width: 502px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 356px;
+      margin: 0;
+      grid-area: text-first;
+    }
+  }
+
+  p:nth-of-type(2) {
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+      grid-area: text-second;
+    }
+  }
+}
+
+.gym__title {
+  margin: 0;
+  font-family: $font-family-primary;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+
+  @media (min-width: $tablet) {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 54px;
+    line-height: 54px;
+    grid-area: title;
+    justify-self: self-start;
+  }
+}
+
+.gym__subtitle {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 12px;
+
+  @media (min-width: $tablet) {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+    font-size: 22px;
+    line-height: 22px;
+    grid-area: subtitle;
+    justify-self: self-start;
+  }
+}
+
+.gym__image-container {
+  @media (min-width: $desktop) {
+    grid-area: photo;
+  }
+}
+
+.gym__video-container {
+  margin-top: 36px;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    position: absolute;
+    bottom: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    bottom: 125px;
+  }
+}
+
+.gym__video-button {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  top: 49px;
+  left: 124px;
+  background: $button-filling;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    top: 58px;
+    left: 109px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 72px;
+    height: 72px;
+    top: 79px;
+    left: 145px;
+  }
+
+  svg {
+    @media (min-width: $desktop) {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
+
+.gym__video-button::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid $background-banner;
+  opacity: 0.2;
+
+  @media (min-width: $desktop) {
+    width: 100px;
+    height: 100px;
+  }
+}
