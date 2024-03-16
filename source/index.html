@@ -68,16 +68,17 @@
               <img class="gym__image" src="./img/gym.jpg" alt="Тренажерный зал SyperGym." srcset="./img/gym@2x.jpg" width="320" height="280">
             </picture>
           </div>
-          <div class="gym__video-container">
-            <picture>
-              <source media="(min-width: 1366px)" srcset="./img/video-preview-desktop.jpg 1x, ./img/video-preview-desktop@2x.jpg 2x" width="360" height="230">
-              <source media="(min-width: 768px)" srcset="./img/video-preview-tablet.jpg 1x, ./img/video-preview-tablet@2x.jpg 2x" width="270" height="170">
-              <img class="gym__video" src="./img/video-preview.jpg" srcset="./img/video-preview@2x.jpg" alt="Превью видео про тренажерный зал." width="320" height="170">
-            </picture>
-            <button class="gym__video-button">
+          <div class="gym__video-container video video--nojs">
+            <a class="video-link" href="https://www.youtube.com/watch?v=9TZXsZItgdw" target="_blank">
+              <picture>
+                <source media="(min-width: 1366px)" srcset="./img/video-preview-desktop.jpg 1x, ./img/video-preview-desktop@2x.jpg 2x" width="360" height="230">
+                <source media="(min-width: 768px)" srcset="./img/video-preview-tablet.jpg 1x, ./img/video-preview-tablet@2x.jpg 2x" width="270" height="170">
+                <img class="video__image" src="./img/video-preview.jpg" srcset="./img/video-preview@2x.jpg" alt="Превью видео про тренажерный зал." width="320" height="170">
+              </picture>
+            </a>
+            <button class="video__button">
               <span class="visually-hidden">Воспроизвести видео.</span>
               <span>
-                <!-- <img src="./img/" alt="Воспроизвести видео."> -->
                 <svg width="12" height="12">
                   <use href="/__spritemap#sprite-play-video"></use>
                 </svg>

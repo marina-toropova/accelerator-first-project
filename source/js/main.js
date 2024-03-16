@@ -3,4 +3,7 @@
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
 
-import { playVideo } from './modules/play-video';
+import { setupVideo } from './modules/video.js';
+
+setupVideo();
+
