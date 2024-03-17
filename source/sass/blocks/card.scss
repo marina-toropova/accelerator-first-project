@@ -1,0 +1,57 @@
+.card {
+  width: 290px;
+  padding: 50px 42px;
+  text-align: center;
+  background-color: $basic-white;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card__heading {
+  margin: 0;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.card__number-of-sessions {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.card__price {
+  position: relative;
+  margin: 0;
+  padding: 66px 9px 11px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  color: $text-additional-accent;
+  z-index: 1;
+  margin-right: 33px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 33px;
+    background-image: url("../../img/sprite/ruble.svg");
+    bottom: 29px;
+    right: 4px;
+  }
+}
+
+.card__link {
+  @include link-reset;
+
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 25px 42px;
+  border: 2px solid $basic-blue;
+  width: 196px;
+  align-self: center;
+}

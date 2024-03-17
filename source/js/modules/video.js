@@ -18,11 +18,15 @@ function setupVideo() {
 
 function createIframe() {
   const iframe = document.createElement('iframe');
+  const width = video.querySelector('img').offsetWidth;
+  const height = video.querySelector('img').offsetHeight;
 
   iframe.setAttribute('allowfullscreen', '');
   iframe.setAttribute('loading', 'lazy');
   iframe.setAttribute('title', 'Бесплатные интерактивные онлайн-курсы.');
-  iframe.setAttribute('src', 'https://www.youtube.com/embed/9TZXsZItgdw?si=D7Z4DSP2eRraemeB');
+  iframe.setAttribute('src', 'https://www.youtube.com/embed/9TZXsZItgdw?si=D7Z4DSP2eRraemeB&autoplay=1');
+  iframe.setAttribute('width', width);
+  iframe.setAttribute('height', height);
   iframe.classList.add('video__iframe');
 
   return iframe;

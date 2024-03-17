@@ -9,11 +9,6 @@
   </head>
 
   <body class="page-body">
-    <!-- пример использования спрайта -->
-      <!--     <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg> -->
 
     <div class="hero" data-test="hero">
       <h1 class="visually-hidden">Фитнес-центр SUPERGYM</h1>
@@ -54,7 +49,9 @@
         </div>
       </div>
     </div>
+
     <main>
+
       <section class="gym" data-test="about">
         <div class="gym__container container">
           <h2 class="gym__title">Тренажёрный зал</h2>
@@ -87,11 +84,99 @@
           </div>
         </div>
       </section>
+
+      <section class="price" data-test="price">
+        <div class="price__container container">
+
+          <h2 class="price__title">Абонементы</h2>
+
+          <ul class="price__list">
+            <li class="price__item" data-tab="tab-1" tabindex="0">1 месяц</li>
+            <li class="price__item" data-tab="tab-2" tabindex="0">6 месяцев</li>
+            <li class="price__item" data-tab="tab-3" tabindex="0">12 месяцев</li>
+          </ul>
+
+          <ul class="price__card-wrapper" id="tab-1">
+
+            <li class="price__card card">
+                <p class="card__heading">С тренером</p>
+                <p class="card__number-of-sessions">12 занятий</p>
+                <p class="card__price">5000</p>
+                <a class="card__link" href="#">Купить абонемент</a>
+            </li>
+
+            <li class="price__card card">
+              <p class="card__heading">Дневной</p>
+              <p class="card__number-of-sessions">с 8:00 до 17:00</p>
+              <p class="card__price">1700</p>
+              <a class="card__link" href="#">Купить абонемент</a>
+            </li>
+
+            <li class="price__card card">
+              <p class="card__heading">Полный день</p>
+              <p class="card__number-of-sessions">с 8:00 до 22:00</p>
+              <p class="card__price">2700</p>
+              <a class="card__link" href="#">Купить абонемент</a>
+            </li>
+
+          </ul>
+
+          <ul class="price__card-wrapper" id="tab-2">
+
+            <li class="price__card card">
+                <p class="card__heading">С тренером</p>
+                <p class="card__number-of-sessions">12 занятий</p>
+                <p class="card__price">30000</p>
+                <a class="card__link" href="#">Купить абонемент</a>
+            </li>
+
+            <li class="price__card card">
+              <p class="card__heading">Дневной</p>
+              <p class="card__number-of-sessions">с 8:00 до 17:00</p>
+              <p class="card__price">10 200</p>
+              <a class="card__link" href="#">Купить абонемент</a>
+            </li>
+
+            <li class="price__card card">
+              <p class="card__heading">Полный день</p>
+              <p class="card__number-of-sessions">с 8:00 до 22:00</p>
+              <p class="card__price">16 200</p>
+              <a class="card__link" href="#">Купить абонемент</a>
+            </li>
+
+          </ul>
+
+          <ul class="price__card-wrapper" id="tab-3">
+
+            <li class="price__card card">
+                <p class="card__heading">С тренером</p>
+                <p class="card__number-of-sessions">12 занятий</p>
+                <p class="card__price">60 000</p>
+                <a class="card__link" href="#">Купить абонемент</a>
+            </li>
+
+            <li class="price__card card">
+              <p class="card__heading">Дневной</p>
+              <p class="card__number-of-sessions">с 8:00 до 17:00</p>
+              <p class="card__price">20 400</p>
+              <a class="card__link" href="#">Купить абонемент</a>
+            </li>
+
+            <li class="price__card card">
+              <p class="card__heading">Полный день</p>
+              <p class="card__number-of-sessions">с 8:00 до 22:00</p>
+              <p class="card__price">32 400</p>
+              <a class="card__link" href="#">Купить абонемент</a>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
     </main>
     <footer></footer>
 
     <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="price">price</div>
     <div data-test="games">games</div>
     <div data-test="juri">juri</div>
     <div data-test="features">features</div>

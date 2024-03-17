@@ -1,0 +1,59 @@
+.price {
+  background-color: $background-additional-white;
+}
+
+.price__container {
+  padding: 40px 0;
+}
+
+.price__title {
+  font-family: $font-family-primary;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.price__list {
+  @include list-reset;
+
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.price__item {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $light;
+  padding-bottom: 18px;
+  cursor: pointer;
+}
+
+.price__item.active {
+  color: $basic-blue;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: $button-tabs;
+  }
+}
+
+.price__card-wrapper {
+  @include list-reset;
+
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
