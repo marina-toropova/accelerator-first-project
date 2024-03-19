@@ -15,8 +15,8 @@
   position: absolute;
   width: 52px;
   height: 52px;
-  top: 49px;
-  left: 124px;
+  top: 59px;
+  left: 134px;
   background: $button-filling;
   border-radius: 50%;
   border: none;
@@ -57,5 +57,11 @@
   @media (min-width: $desktop) {
     width: 100px;
     height: 100px;
+  }
+}
+
+.video__image {
+  @media (max-width: $only-mobile) {
+    max-width: none;
   }
 }

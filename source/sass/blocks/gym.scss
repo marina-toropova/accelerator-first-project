@@ -1,5 +1,5 @@
 .gym__container {
-  padding: 40px 0;
+  padding: 40px 0 36px;
 
   @media (min-width: $tablet) {
     padding: 60px 0 120px;
@@ -15,11 +15,11 @@
     grid-template-columns: 355px 145px 660px;
     grid-template-rows: auto 15px auto 86px auto auto;
     grid-template-areas:
-      "title . photo"
-      ". . photo"
-      "subtitle . photo"
-      ". . photo"
-      "text-first . photo"
+      "title       . photo"
+      ".           . photo"
+      "subtitle    . photo"
+      ".           . photo"
+      "text-first  . photo"
       "text-second . photo";
   }
 
@@ -104,14 +104,22 @@
 }
 
 .gym__image-container {
+  @media (max-width: $only-mobile) {
+    margin-left: -15px;
+  }
+
   @media (min-width: $desktop) {
     grid-area: photo;
   }
 }
 
 .gym__video-container {
-  margin-top: 36px;
+  margin-top: 32px;
   position: relative;
+
+  @media (max-width: $only-mobile) {
+    margin-left: -15px;
+  }
 
   @media (min-width: $tablet) {
     margin: 0;
@@ -124,3 +132,8 @@
   }
 }
 
+.gym__image {
+  @media (max-width: $only-mobile) {
+    max-width: none;
+  }
+}
