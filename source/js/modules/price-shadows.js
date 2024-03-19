@@ -6,7 +6,7 @@ const setPriceShadow = () => {
     const priceElement = card.querySelector('.card__price');
 
     // Создаем уникальный класс для каждой цены
-    const uniqueClass = `price-shadow-${index + 1}`;
+    const uniqueClass = `card__price-shadow--${index + 1}`;
 
     const style = `
       .${uniqueClass}::before {
@@ -19,6 +19,13 @@ const setPriceShadow = () => {
         color: #e8e8e8;
         pointer-events: none;
         z-index: -1;
+
+        @media (min-width: 768px) {
+          .${uniqueClass}::before {
+            font-size: 100px;
+            line-height: 150px;
+          }
+        }
       }
     `;
 

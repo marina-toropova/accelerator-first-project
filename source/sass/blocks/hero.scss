@@ -11,7 +11,7 @@
   flex-wrap: wrap;
 
   @media (min-width: $tablet) {
-    padding: 30px 0;
+    padding: 30px 0 28px;
   }
 }
 
@@ -34,7 +34,7 @@
       "list . link  . image"
       ".    . .     . image";
     grid-template-columns: 113px 26px 185px 30px 324px;
-    grid-template-rows: 31px auto auto 56px 31px;
+    grid-template-rows: 31px 222px 50px 56px 31px;
     padding: 0 0 100px;
     row-gap: 0;
     column-gap: 0;

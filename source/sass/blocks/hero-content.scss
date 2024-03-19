@@ -93,6 +93,10 @@
 
   grid-area: link;
 
+  @media (min-width: $tablet) {
+    padding: 19px 0;
+  }
+
   @media (min-width: $desktop) {
     padding: 27px 0;
   }

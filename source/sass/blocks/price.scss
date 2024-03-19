@@ -1,9 +1,24 @@
 .price {
   background-color: $background-additional-white;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    overflow-x: hidden;
+  }
 }
 
 .price__container {
   padding: 40px 0;
+
+  @media (min-width: $tablet) {
+    padding: 60px 0;
+    width: 380px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 100px 0;
+    width: 1160px;
+  }
 }
 
 .price__title {
@@ -13,6 +28,16 @@
   font-weight: 600;
   text-align: center;
   margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 54px;
+    line-height: 54px;
+  }
 }
 
 .price__list {
@@ -23,6 +48,21 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 30px;
+
+  @media (min-width: $tablet) {
+    margin: 35px auto;
+    justify-content: center;
+    gap: 43px;
+    width: 310px;
+    height: 28px; // изменить
+  }
+
+  @media (min-width: $desktop) {
+    margin: 20px auto 0;
+    gap: 50px;
+    width: 350px;
+    min-height: 28px;
+  }
 }
 
 .price__item {
@@ -32,6 +72,16 @@
   color: $light;
   padding-bottom: 17px;
   cursor: pointer;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .price__item.active {
@@ -46,6 +96,15 @@
     bottom: -2px;
     left: 0;
     background-color: $button-tabs;
+
+    @media (min-width: $tablet) {
+      bottom: 7px;
+      width: 99%;
+    }
+
+    @media (min-width: $desktop) {
+      bottom: 9px;
+    }
   }
 }
 
@@ -56,8 +115,46 @@
   flex-wrap: wrap;
   gap: 35px;
   display: none;
+
+  @media (min-width: $tablet) {
+    margin-top: 45px;
+    gap: 40px;
+    position: relative;
+    z-index: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 40px;
+  }
+}
+
+.price__card-wrapper::after {
+  @media (min-width: $tablet) {
+    position: absolute;
+    content: "";
+    width: 325px;
+    height: 355px;
+    background-image: url("../../img/exercise-pancakes.png");
+    bottom: -27px;
+    right: -194px;
+    z-index: -1;
+  }
+
+  @media (min-width: $desktop) {
+    background-image: url("../../img/exercise-pancakes-desktop.png");
+    width: 344px;
+    height: 430px;
+    bottom: -81px;
+    right: -144px;
+  }
 }
 
 .price__card-wrapper.active {
   display: flex;
+}
+
+.price__card {
+  @media (min-width: $tablet) {
+    z-index: 2;
+  }
 }
