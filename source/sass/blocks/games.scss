@@ -9,6 +9,10 @@
     display: flex;
     padding: 60px 0 30px;
   }
+
+  @media (min-width: $desktop) {
+    padding: 100px 0;
+  }
 }
 
 .games__content {
@@ -27,7 +31,13 @@
     column-gap: 21px;
     row-gap: 0;
     grid-template-columns: 100px 100px;
-    height: min-content;
+  }
+
+  @media (min-width: $desktop) {
+    width: 500px;
+    grid-template-columns: 168px 95px;
+    padding: 60px 80px 98px;
+    column-gap: 77px;
   }
 }
 
@@ -38,6 +48,11 @@
   font-weight: 600;
   margin: 0;
   grid-area: title;
+
+  @media (min-width: $desktop) {
+    font-size: 82px;
+    line-height: 96px;
+  }
 }
 
 .games__subtitle {
@@ -75,6 +90,13 @@
     padding-top: 2px;
     column-gap: 4px;
   }
+
+  @media (min-width: $desktop) {
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 0;
+    row-gap: 11px;
+  }
 }
 
 .games__date span:nth-of-type(1) {
@@ -94,6 +116,11 @@
       width: 100px;
       bottom: -4px;
     }
+
+    @media (min-width: $desktop) {
+      width: 95px;
+      bottom: -6px;
+    }
   }
 }
 
@@ -105,6 +132,11 @@
 
   @media (min-width: $tablet) {
     align-self: center;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 40px;
+    line-height: 40px;
   }
 }
 
@@ -120,6 +152,16 @@
   }
 }
 
+.games__image-wrapper {
+  @media (min-width: $tablet) {
+    height: 348px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 500px;
+  }
+}
+
 .games__time {
   margin: 5px 0 0;
   width: 56px;
@@ -127,6 +169,10 @@
 
   @media (min-width: $tablet) {
     margin-top: 9px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-top: 19px;
   }
 }
 
@@ -149,6 +195,11 @@
       width: 100px;
       top: 26px;
     }
+
+    @media (min-width: $desktop) {
+      width: 95px;
+      top: 31px;
+    }
   }
 }
 
@@ -158,6 +209,12 @@
   font-weight: 700;
   display: block;
   padding-top: 4px;
+
+  @media (min-width: $desktop) {
+    font-size: 40px;
+    line-height: 40px;
+    padding-top: 13px;
+  }
 }
 
 .games__link {
@@ -177,5 +234,11 @@
     width: 220px;
     margin-top: 11px;
     padding: 22px 0 28px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 340px;
+    margin-top: 12px;
+    padding: 25px 0;
   }
 }
