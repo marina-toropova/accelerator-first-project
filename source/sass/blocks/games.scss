@@ -1,0 +1,122 @@
+.games {
+  color: $basic-white;
+}
+
+.games__container {
+  padding: 27px 0;
+}
+
+.games__content {
+  background-color: $background-banner;
+  padding: 40px;
+  display: grid;
+  grid-template-areas:
+    "title    date"
+    "subtitle subtitle"
+    "link     link";
+  row-gap: 16px;
+  column-gap: 55px;
+}
+
+.games__title {
+  font-family: $font-family-primary;
+  font-size: 48px;
+  line-height: 54px;
+  font-weight: 600;
+  margin: 0;
+  grid-area: title;
+}
+
+.games__subtitle {
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  grid-area: subtitle;
+  letter-spacing: -0.09px;
+}
+
+.games__date-time-wrapper {
+  grid-area: date;
+}
+
+.games__date {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  display: grid;
+  grid-template-areas:
+    "date   date"
+    "number month-year";
+  width: 48px;
+  row-gap: 3px;
+}
+
+.games__date span:nth-of-type(1) {
+  grid-area: date;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 42px;
+    height: 1px;
+    background-color: $basic-white;
+  }
+}
+
+.games__date span:nth-of-type(2) {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  grid-area: number;
+}
+
+.games__date span:nth-of-type(3) {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  grid-area: month-year;
+}
+
+.games__time {
+  margin: 5px 0 0;
+  width: 56px;
+  position: relative;
+}
+
+.games__time span:nth-of-type(1) {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 24px;
+    left: 0;
+    width: 56px;
+    height: 1px;
+    background-color: $basic-white;
+  }
+}
+
+.games__time span:nth-of-type(2) {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  display: block;
+  padding-top: 4px;
+}
+
+.games__link {
+  @include link-reset;
+
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  border: 2px solid $basic-white;
+  display: block;
+  text-align: center;
+  padding: 22px 0;
+  grid-area: link;
+}
