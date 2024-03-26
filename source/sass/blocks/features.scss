@@ -1,0 +1,104 @@
+.features {
+  background-color: $background-additional-white;
+}
+
+.features__container {
+  padding: 40px 0;
+}
+
+.features__title {
+  font-family: $font-family-primary;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+  margin: 0;
+}
+
+.features__list {
+  @include list-reset;
+
+  margin-top: 40px;
+  display: grid;
+  row-gap: 35px;
+}
+
+.features__list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 12px;
+  padding: 0 30px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.features__list p:first-of-type {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  order: 1;
+}
+
+.features__list p:nth-of-type(2) {
+  span:first-of-type {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 64px;
+    background: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
+    background-clip: text;
+    color: transparent;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features__list p:nth-of-type(3) {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  order: 2;
+  text-align: center;
+}
+
+.features__list li:nth-of-type(3) {
+  background-color: $background-additional;
+  color: $basic-white;
+  padding: 30px 75px 40px;
+  margin: 5px 0;
+  row-gap: 20px;
+}
+
+.features__list li:nth-of-type(3) p:nth-of-type(1) {
+  span:first-of-type {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  span:nth-of-type(2) {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  order: 0;
+  align-items: center;
+  text-align: center;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  row-gap: 5px;
+}
+
+.features__list li:nth-of-type(3) p:nth-of-type(2) {
+  text-align: center;
+  font-size: 14px;
+  line-height: 22px;
+}

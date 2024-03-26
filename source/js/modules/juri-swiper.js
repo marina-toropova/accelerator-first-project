@@ -18,7 +18,7 @@ const swiper = new Swiper('.swiper', {
     320: {
       slidesPerView: 1,
       spaceBetween: 20,
-      initialSlide: 3,
+      initialSlide: 1,
       scrollbar: {
         el: '.swiper-scrollbar',
       },
