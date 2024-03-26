@@ -56,10 +56,17 @@
   width: 227px;
   height: 280px;
   position: relative;
+  transition: 0.8s;
 
   @media (min-width: $tablet) {
     width: 260px;
     height: 300px;
+  }
+
+  @media (min-width: $desktop) {
+    &:hover .jury__info {
+      display: block;
+    }
   }
 
   img {
@@ -87,6 +94,11 @@
       }
     }
   }
+
+  &:focus .jury__info {
+    display: block;
+    transition: 0.8s;
+  }
 }
 
 .jury__slide-title {
@@ -101,6 +113,47 @@
 
   @media (min-width: $tablet) {
     left: 66px;
+  }
+}
+
+.jury__info {
+  display: none;
+  transition: 0.8s;
+  box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
+  background-color: $basic-blue;
+  opacity: 0.89;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  color: $basic-white;
+  padding: 45px 42px;
+
+  h4 {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+  }
+
+  h5 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #b6bdcc;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-top: 33px;
+    padding-left: 10px;
+    display: grid;
+    row-gap: 12px;
   }
 }
 
@@ -121,4 +174,8 @@
     bottom: 233px;
     left: -56px;
   }
+}
+
+.jury__button {
+  cursor: pointer;
 }
