@@ -15,27 +15,29 @@
   margin: 0;
 }
 
-/* .jury__wrapper {
-  column-gap: 15px;
-} */
+.jury__wrapper {
+  @include list-reset;
+}
 
 .jury__slide {
   padding: 0 30px;
-}
-
-.jury__slide-link {
-  position: relative;
   width: 227px;
   height: 280px;
+  position: relative;
+
+  img {
+    height: 280px;
+    object-fit: cover;
+  }
 }
 
-.juri__slide-title {
+.jury__slide-title {
   position: absolute;
   color: $basic-white;
   font-weight: 400;
   font-size: 22px;
   line-height: 22px;
   margin: 0;
-  bottom: 29px;
-  left: 27px;
+  bottom: 25px;
+  left: 20%;
 }
