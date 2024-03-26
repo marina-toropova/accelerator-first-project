@@ -5,6 +5,10 @@
     padding: 30px 0 60px;
     position: relative;
   }
+
+  @media (min-width: $tablet) {
+    padding: 100px 0;
+  }
 }
 
 .jury__swiper {
@@ -13,6 +17,10 @@
   @media (min-width: $tablet) {
     margin-top: 46px;
     width: 560px;
+  }
+
+  @media (min-width: $desktop) {
+    width: auto;
   }
 }
 
@@ -27,6 +35,10 @@
   @media (min-width: $tablet) {
     font-size: 54px;
     line-height: 54px;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: left;
   }
 }
 
@@ -55,14 +67,23 @@
     object-fit: cover;
 
     @media (min-width: $tablet) {
+      width: 260px;
       height: 300px;
     }
   }
 
-  &:nth-of-type(7) {
+  &:nth-of-type(6) {
     @media (min-width: $tablet) {
       .jury__slide-title {
         left: 57px;
+      }
+    }
+  }
+
+  &:nth-of-type(7) {
+    @media (min-width: $desktop) {
+      .jury__slide-title {
+        left: 43px;
       }
     }
   }
@@ -92,5 +113,12 @@
     justify-content: space-between;
     width: inherit;
     bottom: 190px;
+  }
+
+  @media (min-width: $desktop) {
+    z-index: 1;
+    width: 1272px;
+    bottom: 233px;
+    left: -56px;
   }
 }
