@@ -4,6 +4,12 @@
 
 .features__container {
   padding: 40px 0;
+
+  @media (min-width: $tablet) {
+    padding: 60px 0;
+    width: 698px;
+    margin: 0 auto;
+  }
 }
 
 .features__title {
@@ -13,6 +19,11 @@
   line-height: 32px;
   text-align: center;
   margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 42px;
+    line-height: 42px;
+  }
 }
 
 .features__list {
@@ -21,6 +32,19 @@
   margin-top: 40px;
   display: grid;
   row-gap: 35px;
+
+  @media (min-width: $tablet) {
+    grid-template-areas:
+      "square   parking"
+      ".        ."
+      "trainers trainers"
+      ".        ."
+      "comfort  experience";
+    grid-template-rows: auto 44px auto 36px auto;
+    column-gap: 30px;
+    margin-top: 46px;
+    row-gap: 0;
+  }
 }
 
 .features__list li {
@@ -30,8 +54,61 @@
   row-gap: 12px;
   padding: 0 30px;
 
+  @media (min-width: $tablet) {
+    display: grid;
+    column-gap: 14px;
+    grid-template-areas:
+      "number title"
+      "number text";
+    padding: 0 0 0 10px;
+    row-gap: 3px;
+  }
+
   p {
     margin: 0;
+  }
+
+  &:first-of-type {
+    @media (min-width: $tablet) {
+      grid-area: square;
+    }
+  }
+
+  &:nth-of-type(2) {
+    @media (min-width: $tablet) {
+      grid-area: parking;
+    }
+  }
+
+  &:nth-of-type(3) {
+    background-color: $background-additional;
+    color: $basic-white;
+    padding: 30px 75px 40px;
+    margin: 5px 0;
+    row-gap: 20px;
+
+    @media (min-width: $tablet) {
+      grid-area: trainers;
+      width: 320px;
+      justify-self: center;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 35px;
+      row-gap: 26px;
+    }
+  }
+
+  &:nth-of-type(4) {
+    @media (min-width: $tablet) {
+      grid-area: comfort;
+    }
+  }
+
+  &:nth-of-type(5) {
+    @media (min-width: $tablet) {
+      grid-area: experience;
+    }
   }
 }
 
@@ -40,6 +117,11 @@
   font-size: 18px;
   line-height: 20px;
   order: 1;
+
+  @media (min-width: $tablet) {
+    grid-area: title;
+    font-size: 20px;
+  }
 }
 
 .features__list p:nth-of-type(2) {
@@ -50,11 +132,34 @@
     background: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
     background-clip: text;
     color: transparent;
+
+    @media (min-width: $tablet) {
+      font-size: 70px;
+      line-height: 70px;
+      letter-spacing: -1px;
+      row-gap: inherit;
+    }
+  }
+
+  span:nth-of-type(2) {
+    color: #2e35ac;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+
+    @media (min-width: $tablet) {
+      line-height: 22px;
+      align-self: self-start;
+    }
   }
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $tablet) {
+    grid-area: number;
+  }
 }
 
 .features__list p:nth-of-type(3) {
@@ -63,14 +168,15 @@
   line-height: 22px;
   order: 2;
   text-align: center;
-}
 
-.features__list li:nth-of-type(3) {
-  background-color: $background-additional;
-  color: $basic-white;
-  padding: 30px 75px 40px;
-  margin: 5px 0;
-  row-gap: 20px;
+  @media (min-width: $tablet) {
+    grid-area: text;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    align-self: baseline;
+    letter-spacing: -0.3px;
+  }
 }
 
 .features__list li:nth-of-type(3) p:nth-of-type(1) {
@@ -78,12 +184,22 @@
     font-weight: 700;
     font-size: 64px;
     line-height: 64px;
+
+    @media (min-width: $tablet) {
+      font-size: 70px;
+      line-height: 70px;
+    }
   }
 
   span:nth-of-type(2) {
     font-weight: 700;
     font-size: 22px;
     line-height: 22px;
+
+    @media (min-width: $tablet) {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 
   display: flex;
@@ -95,10 +211,19 @@
   font-size: 14px;
   line-height: 22px;
   row-gap: 5px;
+
+  @media (min-width: $tablet) {
+    row-gap: 24px;
+  }
 }
 
 .features__list li:nth-of-type(3) p:nth-of-type(2) {
   text-align: center;
   font-size: 14px;
   line-height: 22px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
