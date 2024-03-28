@@ -1,5 +1,17 @@
 .offers__container {
   padding: 40px 0;
+
+  @media (min-width: $tablet) {
+    width: 678px;
+    margin: 0 auto;
+    padding: 61px 0;
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "info  photo"
+      "deal  deal";
+    row-gap: 34px;
+  }
 }
 
 .offers__title {
@@ -9,6 +21,12 @@
   line-height: 32px;
   text-align: center;
   margin: 0;
+
+  @media (min-width: $tablet) {
+    font-size: 42px;
+    line-height: 42px;
+    grid-area: title;
+  }
 }
 
 .offers__content {
@@ -20,6 +38,14 @@
   display: flex;
   flex-direction: column;
 
+  @media (min-width: $tablet) {
+    margin: 0;
+    grid-area: info;
+    width: 278px;
+    text-align: left;
+    padding: 40px 25px;
+  }
+
   p {
     margin: 0;
     font-weight: 700;
@@ -29,12 +55,24 @@
     display: flex;
     flex-direction: column;
     row-gap: 9px;
+
+    @media (min-width: $tablet) {
+      font-size: 24px;
+      line-height: 24px;
+      row-gap: 17px;
+    }
   }
 
   span {
     font-weight: 700;
     font-size: 64px;
     line-height: 64px;
+
+    @media (min-width: $tablet) {
+      font-size: 70px;
+      line-height: 70px;
+      letter-spacing: -1.5px;
+    }
   }
 
   h3 {
@@ -44,6 +82,21 @@
     width: 260px;
     margin: 0 auto;
     margin-top: 28px;
+
+    @media (min-width: $tablet) {
+      margin: 0;
+      font-size: 18px;
+      line-height: 24px;
+      margin-top: 42px;
+    }
+  }
+}
+
+.offers__image {
+  @media (min-width: $tablet) {
+    grid-area: photo;
+    width: 400px;
+    height: 462px;
   }
 }
 
@@ -55,10 +108,41 @@
   font-size: 14px;
   line-height: 14px;
   margin-top: 28px;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    margin-top: 161px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 73px;
+    height: 1px;
+    left: 0;
+    bottom: -6px;
+    background-color: $basic-white;
+  }
 
   &--deal {
     margin: 0;
   }
+
+  &--free-month {
+    @media (min-width: $tablet) {
+      margin-top: 30px;
+    }
+  }
+
+  &--discont {
+    @media (min-width: $tablet) {
+      margin-top: 54px;
+    }
+  }
+}
+
+.offers__link--deal::after {
+  background-color: #74819c;
 }
 
 .offers__deal-wrapper {
@@ -68,11 +152,21 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+
+  @media (min-width: $tablet) {
+    grid-area: deal;
+    margin: 0;
+    flex-wrap: nowrap;
+  }
 }
 
 .offers__deal-inner-wrapper {
   background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
   border: none;
+
+  @media (min-width: $tablet) {
+    width: 324px;
+  }
 }
 
 .offers__deal {
@@ -85,12 +179,27 @@
   flex-direction: column;
   align-items: center;
   row-gap: 20px;
+  color: $button-outline-blue;
+
+  @media (min-width: $tablet) {
+    width: 310px;
+    text-align: left;
+    align-items: flex-start;
+    row-gap: 0;
+    padding: 20px 20px 27px;
+  }
 
   h3 {
     margin: 0;
     font-weight: 700;
     font-size: 22px;
     line-height: 22px;
+
+    @media (min-width: $tablet) {
+      font-size: 26px;
+      line-height: 26px;
+      letter-spacing: 0.3px;
+    }
   }
 
   p {
@@ -98,5 +207,13 @@
     font-size: 14px;
     line-height: 22px;
     width: 236px;
+
+    @media (min-width: $tablet) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 10px;
+      width: auto;
+      letter-spacing: -0.2px;
+    }
   }
 }

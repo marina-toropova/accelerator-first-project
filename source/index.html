@@ -412,6 +412,7 @@
           </div>
           <div class="offers__image">
             <picture>
+              <source type="image/jpg" media="(min-width: 768px)" srcset="./img/girl-img-tablet.jpg 1x, ./img/girl-img-tablet@2x.jpg 2x" width="400" height="462">
               <img src="./img/girl-img.jpg" srcset="./img/girl-img@2x.jpg" alt="Девушка в спортивном костюме на фоне неба." width="320" height="360">
             </picture>
           </div>
@@ -420,14 +421,14 @@
               <div class="offers__deal offers__deal--free-month">
                 <h3>Месяц бесплатно</h3>
                 <p>Приведи друга, получи абонемент в подарок</p>
-                <a class="offers__link offers__link--deal" href="#">подробнее</a>
+                <a class="offers__link offers__link--deal offers__link--free-month" href="#">подробнее</a>
               </div>
             </div>
             <div class="offers__deal-inner-wrapper">
               <div class="offers__deal offers__deal--discont">
                 <h3>Скидка 20%</h3>
                 <p>Корпоративный фитнес с командой</p>
-                <a class="offers__link offers__link--deal" href="#">подробнее</a>
+                <a class="offers__link offers__link--deal offers__link--discont" href="#">подробнее</a>
               </div>
             </div>
           </div>
@@ -438,7 +439,6 @@
     <footer></footer>
 
     <!-- примеры требуемых атрибутов data-test="*"
-    <div data-test="offers">offers</div>
     <div data-test="faq">faq</div>
     <div data-test="reviews">reviews</div>
     <div data-test="form">form</div>
