@@ -1,0 +1,69 @@
+.qanda {
+  border-top: 1px solid $divider;
+  padding: 20px 0;
+  position: relative;
+
+  &:last-of-type {
+    border-bottom: 1px solid $divider;
+  }
+
+  h3 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    width: 238px;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 20px;
+    display: none;
+  }
+
+  p.active {
+    display: block;
+  }
+}
+
+.qanda__button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $button-outline-blue;
+  border-radius: 50%;
+  right: 0;
+  top: 25px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 1px;
+    top: 50%;
+    left: 25%;
+    background-color: $button-outline-blue;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+.qanda__button.active {
+  background-color: $button-outline-blue;
+
+  &::before,
+  &::after {
+    background-color: $basic-white;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+    background-color: transparent;
+  }
+}
