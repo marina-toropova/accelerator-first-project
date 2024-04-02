@@ -55,23 +55,44 @@ function bindTabs(titleClass, contentClass, activeClass, startTitleClass, startC
 
 // Accordion
 
-function playAccordion(buttonClass, startTitleContainer, startTitle, activeClass) {
+function playAccordion(buttonClass, startTitleContainer, startButton, activeClass) {
   const buttons = document.querySelectorAll(buttonClass);
   const activeQuestion = document.querySelector(startTitleContainer);
-  const title = activeQuestion.querySelector(startTitle);
+  const openbutton = activeQuestion.querySelector(startButton);
 
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       const answer = button.nextElementSibling;
-      if(answer.style.display === 'block'){
-        answer.style.display = 'none';
+      const isActive = button.classList.contains(activeClass);
+
+      if (!isActive) {
+        button.classList.add(activeClass);
+        answer.classList.add(activeClass);
       } else {
-        answer.style.display = 'block';
+        button.classList.remove(activeClass);
+        answer.classList.remove(activeClass);
       }
-      button.classList.toggle(activeClass);
+    });
+
+    button.addEventListener('keydown', (key) => {
+      if (key === 'Enter' || key === ' ') {
+        const answer = button.nextElementSibling;
+        const isActive = button.classList.contains(activeClass);
+
+        if (!isActive) {
+          button.classList.add(activeClass);
+          answer.classList.add(activeClass);
+        } else {
+          button.classList.remove(activeClass);
+          answer.classList.remove(activeClass);
+        }
+      }
     });
   });
-  title.classList.add(activeClass);
+
+  openbutton.classList.add(activeClass);
+  openbutton.nextElementSibling.classList.add(activeClass);
 }
+
 
 export { bindTabs, playAccordion };

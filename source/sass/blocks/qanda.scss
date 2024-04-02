@@ -20,12 +20,16 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
-    margin-top: 20px;
-    display: none;
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.7s ease;
   }
 
-  p.active {
-    display: block;
+  .active {
+    margin-top: 20px;
+    max-height: 1000px;
+    transition: all 3s ease;
   }
 }
 
@@ -37,6 +41,7 @@
   border-radius: 50%;
   right: 0;
   top: 25px;
+  cursor: pointer;
 
   &::before,
   &::after {
