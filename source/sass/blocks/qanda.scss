@@ -5,6 +5,16 @@
     border-bottom: 1px solid $divider;
   }
 
+  &:first-of-type {
+    br {
+      display: none;
+
+      @media (min-width: $desktop) {
+        display: block;
+      }
+    }
+  }
+
   h3 {
     margin: 0;
     font-weight: 400;
@@ -16,6 +26,12 @@
       width: 500px;
       font-size: 22px;
       line-height: 22px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 660px;
+      font-size: 24px;
+      line-height: 24px;
     }
   }
 
@@ -35,12 +51,20 @@
       line-height: 24px;
       letter-spacing: -0.1px;
     }
+
+    @media (min-width: $desktop) {
+      width: 606px;
+    }
   }
 
   .active {
     margin-top: 20px;
     max-height: 1000px;
     transition: all 3s ease;
+
+    @media (min-width: $desktop) {
+      margin-top: 29px;
+    }
   }
 
   br {
@@ -63,6 +87,10 @@
   @media (min-width: $tablet) {
     width: 40px;
     height: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 23px;
   }
 
   &::before,
