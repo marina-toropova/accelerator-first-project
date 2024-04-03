@@ -1,7 +1,7 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.jury__swiper', {
 
   direction: 'horizontal',
   loop: true,
@@ -19,17 +19,14 @@ const swiper = new Swiper('.swiper', {
       slidesPerView: 1,
       spaceBetween: 20,
       initialSlide: 1,
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
     },
 
     768: {
       slidesPerView: 2,
       spaceBetween: 40,
       initialSlide: 3,
-      scrollbar: {
-        el: '.swiper-scrollbar',
+      controller: {
+        inverse: true,
       },
     },
 
@@ -41,6 +38,6 @@ const swiper = new Swiper('.swiper', {
   }
 });
 
-const jurySwiper = document.querySelector('.swiper').swiper;
+const jurySwiper = document.querySelector('.jury__swiper').swiper;
 
 export { swiper, jurySwiper };

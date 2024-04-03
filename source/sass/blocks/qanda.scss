@@ -16,6 +16,10 @@
 
     h3 {
       width: 200px;
+
+      @media (min-width: $tablet) {
+        width: 500px;
+      }
     }
   }
 
@@ -119,6 +123,10 @@
   &--third,
   &--fourth {
     top: 35px;
+
+    @media (min-width: $tablet) {
+      top: 25px;
+    }
   }
 }
 

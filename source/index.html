@@ -544,11 +544,56 @@
         </div>
       </section>
 
+      <section class="reviews" data-test="reviews">
+        <div class="reviews__container container">
+          <h2 class="reviews__title">Отзывы</h2>
+
+            <div class="reviews__swiper swiper">
+
+              <ul class="reviews__swiper-wrapper swiper-wrapper">
+
+                <li class="reviews__swiper-slide review-card swiper-slide">
+                  <h3>Анна Орлова</h3>
+                  <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                  <img src="./img/review.jpg" srcset="./img/review@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                </li>
+
+                <li class="reviews__swiper-slide review-card swiper-slide">
+                  <h3>Анна Орлова</h3>
+                  <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                  <img src="./img/review.jpg" srcset="./img/review@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                </li>
+
+              </ul>
+            </div>
+
+          <!-- If we need navigation buttons -->
+          <div class="reviews__buttons-wrapper">
+            <div class="reviews__swiper-button reviews__swiper-button--prev swiper-button-prev">
+              <span class="visually-hidden">Предыдущий слайд.</span>
+                  <span>
+                    <svg width="17" height="32">
+                      <use href="/__spritemap#sprite-arrow-left"></use>
+                    </svg>
+                  </span>
+            </div>
+            <div class="reviews__swiper-button reviews__swiper-button--next swiper-button-next">
+            <span class="visually-hidden">Следующий слайд.</span>
+                    <span>
+                      <svg width="17" height="32">
+                        <use href="/__spritemap#sprite-arrow-right"></use>
+                      </svg>
+                    </span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
     </main>
     <footer></footer>
 
     <!-- примеры требуемых атрибутов data-test="*"
-    <div data-test="reviews">reviews</div>
     <div data-test="form">form</div>
     <div data-test="footer">footer</div> -->
     <script type="module" src="js/main.js"></script>

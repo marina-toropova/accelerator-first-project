@@ -141,6 +141,8 @@
   line-height: 14px;
   margin-top: 28px;
   position: relative;
+  display: flex;
+  align-self: center;
 
   @media (min-width: $tablet) {
     margin-top: 161px;

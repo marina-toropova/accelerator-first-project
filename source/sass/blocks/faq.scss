@@ -52,10 +52,10 @@
 
   @media (min-width: $tablet) {
     padding-top: 45px;
-    flex-direction: column;
   }
 
   @media (min-width: $desktop) {
+    flex-direction: column;
     grid-area: menu;
     padding-top: 50px;
     row-gap: 10px;
