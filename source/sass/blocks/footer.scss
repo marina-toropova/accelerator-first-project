@@ -5,6 +5,19 @@
 
 .footer__container {
   padding: 40px 0;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-areas: "logo links social";
+    column-gap: 35px;
+    padding: 45px 0 47px;
+  }
+}
+
+.footer__logo {
+  @media (min-width: $tablet) {
+    grid-area: logo;
+  }
 }
 
 .footer__list {
@@ -18,8 +31,25 @@
   row-gap: 20px;
 
   margin-top: 26px;
+
+  @media (min-width: $tablet) {
+    column-gap: 31px;
+    line-height: 22px;
+    margin: 0;
+    grid-area: links;
+    align-self: baseline;
+  }
+}
+
+.footer__list-link {
+  @include link-reset;
 }
 
 .footer__social-list {
   margin: 30px 0 0;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    grid-area: social;
+  }
 }

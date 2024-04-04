@@ -64,6 +64,10 @@
   }
 }
 
+.reviews__swiper-button {
+  cursor: pointer;
+}
+
 .reviews__swiper-button[aria-disabled="true"] {
   opacity: 0.3;
 }
