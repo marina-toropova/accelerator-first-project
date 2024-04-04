@@ -8,6 +8,11 @@
     padding: 60px 0;
     position: relative;
   }
+
+  @media (min-width: $desktop) {
+    width: 560px;
+    padding: 100px 0;
+  }
 }
 
 .reviews__title {
@@ -34,6 +39,10 @@
   @media (min-width: $tablet) {
     margin-top: 35px;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 75px;
+  }
 }
 
 .reviews__buttons-wrapper {
@@ -49,9 +58,8 @@
   }
 
   @media (min-width: $desktop) {
-    z-index: 1;
-    width: 1272px;
-    bottom: 233px;
+    width: 672px;
+    bottom: 209px;
     left: -56px;
   }
 }

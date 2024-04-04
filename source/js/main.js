@@ -5,6 +5,7 @@ import { jurySwiper } from './modules/juri-swiper.js';
 import { faqTabs } from './modules/faq-tabs.js';
 import { playAccordionFaq } from './modules/accordion.js';
 import { reviewsSwiper } from './modules/review-swiper.js';
+import { validateInput } from './modules/form.js';
 
 setupVideo();
 
@@ -17,3 +18,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 setPriceShadow();
 jurySwiper.slideNext();
+validateInput('#name');

@@ -590,11 +590,37 @@
         </div>
       </section>
 
+      <section class="form" data-test="form">
+        <div class="form__container container">
+          <h2 class="form__title">Бесплатное занятие</h2>
+          <form action="https://echo.htmlacademy.ru/" method="get">
+
+            <ul class="form__list">
+              <li class="form__item form__item--name">
+                <label>
+                  <span class="visually-hidden">Имя:</span>
+                  <input class="input input--name" type="text" name="name" placeholder="Имя" id="name" pattern="/^[^0-9]*$/" title="В поле Имя допускается ввод только букв и пробелов" required>
+                </label>
+              </li>
+              <li class="form__item form__item--phone">
+                <label>
+                  <span class="visually-hidden">Телефон:</span>
+                  <input class="input input--phone" type="number" name="phone" id="phone" placeholder="Телефон" required>
+                </label>
+              </li>
+              <li class="form__item form__item--button">
+                <button class="input input--submit" type="submit">Отправить</button>
+              </li>
+            </ul>
+
+          </form>
+        </div>
+      </section>
+
     </main>
     <footer></footer>
 
     <!-- примеры требуемых атрибутов data-test="*"
-    <div data-test="form">form</div>
     <div data-test="footer">footer</div> -->
     <script type="module" src="js/main.js"></script>
   </body>

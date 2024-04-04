@@ -1,0 +1,33 @@
+.input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding-bottom: 7px;
+  border-bottom: 1px solid $divider;
+  color: $basic-white;
+
+  &::placeholder {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    color: $basic-white;
+    opacity: 0.3;
+  }
+
+  &--phone {
+    padding-bottom: 6px;
+  }
+
+  &--submit {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    border: 2px solid $basic-white;
+    padding: 22px;
+
+    @media (min-width: $tablet) {
+      padding: 25px;
+    }
+  }
+}

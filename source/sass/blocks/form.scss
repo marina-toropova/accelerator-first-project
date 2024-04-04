@@ -1,0 +1,65 @@
+.form {
+  background-color: $basic-blue;
+}
+
+.form__container {
+  padding: 70px 0;
+
+  @media (min-width: $tablet) {
+    padding: 60px 0;
+    width: 440px;
+  }
+}
+
+.form__title {
+  margin: 0;
+  font-family: $font-family-primary;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+  color: $basic-white;
+
+  @media (min-width: $tablet) {
+    font-size: 54px;
+    line-height: 54px;
+    text-align: center;
+  }
+}
+
+.form__list {
+  @include list-reset;
+
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-areas:
+      "name   tel"
+      "button button";
+    column-gap: 30px;
+    row-gap: 35px;
+  }
+}
+
+.form__item {
+  &--name {
+    @media (min-width: $tablet) {
+      grid-area: name;
+    }
+  }
+
+  &--phone {
+    @media (min-width: $tablet) {
+      grid-area: tel;
+    }
+  }
+
+  &--button {
+    @media (min-width: $tablet) {
+      grid-area: button;
+    }
+  }
+}
