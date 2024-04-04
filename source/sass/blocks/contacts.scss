@@ -4,6 +4,11 @@
 
 .contacts__container {
   padding: 37px 0;
+
+  @media (min-width: $tablet) {
+    padding: 60px 0;
+    width: 440px;
+  }
 }
 
 .contacts__title {
@@ -12,6 +17,12 @@
   font-weight: 600;
   font-size: 32px;
   line-height: 32px;
+
+  @media (min-width: $tablet) {
+    text-align: center;
+    font-size: 54px;
+    line-height: 54px;
+  }
 }
 
 .contacts__list {
@@ -21,12 +32,49 @@
   display: flex;
   flex-direction: column;
   row-gap: 28px;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-areas:
+      "address  tel"
+      "schedule mail";
+    row-gap: 14px;
+    margin-top: 35px;
+  }
 }
 
 .contacts__item {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
+
+  @media (min-width: $tablet) {
+    row-gap: 6px;
+  }
+
+  &--address {
+    @media (min-width: $tablet) {
+      grid-area: address;
+    }
+  }
+
+  &--schedule {
+    @media (min-width: $tablet) {
+      grid-area: schedule;
+    }
+  }
+
+  &--tel {
+    @media (min-width: $tablet) {
+      grid-area: tel;
+    }
+  }
+
+  &--mail {
+    @media (min-width: $tablet) {
+      grid-area: mail;
+    }
+  }
 }
 
 .contacts__subtitle {
@@ -34,6 +82,15 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &--schedule {
+    letter-spacing: -0.2px;
+  }
 }
 
 .contacts__text {
@@ -41,4 +98,16 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $tablet) {
+    line-height: 22px;
+  }
+
+  &--tel {
+    letter-spacing: -0.4px;
+  }
+
+  &--schedule {
+    letter-spacing: -0.1px;
+  }
 }
