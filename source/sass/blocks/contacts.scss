@@ -1,5 +1,9 @@
 .contacts {
   background-color: $basic-white;
+
+  @media (min-width: $desktop) {
+    border-top: 1px solid $divider;
+  }
 }
 
 .contacts__container {
@@ -8,6 +12,10 @@
   @media (min-width: $tablet) {
     padding: 60px 0;
     width: 440px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 477px;
   }
 }
 
@@ -22,6 +30,10 @@
     text-align: center;
     font-size: 54px;
     line-height: 54px;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: left;
   }
 }
 
@@ -40,6 +52,10 @@
       "schedule mail";
     row-gap: 14px;
     margin-top: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    column-gap: 61px;
   }
 }
 
@@ -61,6 +77,7 @@
   &--schedule {
     @media (min-width: $tablet) {
       grid-area: schedule;
+      position: relative;
     }
   }
 
@@ -74,6 +91,22 @@
     @media (min-width: $tablet) {
       grid-area: mail;
     }
+  }
+}
+
+.contacts__item--schedule::after {
+  @media (min-width: $tablet) {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 117px;
+    background-color: $divider;
+    bottom: 0;
+    right: 29px;
+  }
+
+  @media (min-width: $desktop) {
+    right: -1px;
   }
 }
 
@@ -103,11 +136,19 @@
     line-height: 22px;
   }
 
-  &--tel {
-    letter-spacing: -0.4px;
-  }
-
   &--schedule {
     letter-spacing: -0.1px;
+  }
+}
+
+.contacts__link {
+  @include link-reset;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  &--tel {
+    letter-spacing: -0.4px;
   }
 }
