@@ -4,13 +4,18 @@
 }
 
 .footer__container {
-  padding: 40px 0;
+  padding: 40px 0 36px;
 
   @media (min-width: $tablet) {
     display: grid;
     grid-template-areas: "logo links social";
     column-gap: 35px;
     padding: 45px 0 47px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 40px 0;
+    column-gap: 167px;
   }
 }
 
@@ -38,6 +43,10 @@
     margin: 0;
     grid-area: links;
     align-self: baseline;
+  }
+
+  @media (min-width: $desktop) {
+    column-gap: 84px;
   }
 }
 
