@@ -2,8 +2,8 @@
 
 function bindTabs(titleClass, contentClass, activeClass, startTitleClass, startContentClass) {
 
-  const title = document.querySelectorAll(titleClass);
-  const content = document.querySelectorAll(contentClass);
+  const title = document.querySelectorAll(`.${titleClass}`);
+  const content = document.querySelectorAll(`.${contentClass}`);
   const startTitle = document.querySelector(startTitleClass);
   const startContent = document.querySelector(startContentClass);
 
@@ -30,27 +30,27 @@ function bindTabs(titleClass, contentClass, activeClass, startTitleClass, startC
 
   // Обработчик кликов на табах
   title.forEach((item) => item.addEventListener('click', () => {
-    if (item.classList.contains(activeClass)) {
+    if (item.classList.contains(`${titleClass}--${activeClass}`)) {
       return;
     }
 
     title.forEach((element) => {
-      element.classList.remove(activeClass);
+      element.classList.remove(`${titleClass}--${activeClass}`);
     });
 
-    item.classList.add(activeClass);
+    item.classList.add(`${titleClass}--${activeClass}`);
 
     content.forEach((element) => {
-      element.classList.remove(activeClass);
+      element.classList.remove(`${contentClass}--${activeClass}`);
     });
 
     const activeContent = document.querySelector(`#${item.dataset.tab}`);
-    activeContent.classList.add(activeClass);
+    activeContent.classList.add(`${contentClass}--${activeClass}`);
   }));
 
   // При первой загрузке страницы, активны эти табы
-  startTitle.classList.add(activeClass);
-  startContent.classList.add(activeClass);
+  startTitle.classList.add(`${titleClass}--${activeClass}`);
+  startContent.classList.add(`${contentClass}--${activeClass}`);
 }
 
 // Accordion

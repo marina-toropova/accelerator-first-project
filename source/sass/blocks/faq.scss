@@ -71,6 +71,7 @@
   font-size: 16px;
   line-height: 16px;
   cursor: pointer;
+  transition: 0.3s;
 
   @media (min-width: $tablet) {
     width: 162px;
@@ -83,9 +84,21 @@
     width: 260px;
     padding: 17px 0;
   }
+
+  &:hover:not([aria-disabled="true"]),
+  &:focus:not([aria-disabled="true"]) {
+    border-color: $basic-blue;
+    transition: 0.3s;
+  }
+
+  &[aria-disabled="true"] {
+    border-color: $tab-border;
+    color: $light-grey;
+    cursor: default;
+  }
 }
 
-.faq__item.active {
+.faq__item--active {
   background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
   color: $basic-white;
   border-color: transparent;
@@ -111,7 +124,7 @@
   }
 }
 
-.faq__info-wrapper.active {
+.faq__info-wrapper--active {
   display: block;
 }
 

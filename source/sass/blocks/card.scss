@@ -1,11 +1,13 @@
 .card {
   width: 290px;
-  padding: 50px 42px;
+  padding: 7px;
   text-align: center;
-  background-color: $basic-white;
+  background: $basic-white;
   display: flex;
   flex-direction: column;
   gap: 18px;
+  position: relative;
+  transition: 0.3s;
 
   @media (min-width: $tablet) {
     width: 380px;
@@ -18,6 +20,16 @@
     padding: 65px 78.5px;
     gap: 18px;
   }
+}
+
+.card__inner-wrapper {
+  text-align: center;
+  background-color: $basic-white;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  padding: 43px 42px;
 }
 
 .card__heading {
@@ -56,7 +68,6 @@
   font-size: 48px;
   line-height: 72px;
   color: $text-additional-accent;
-  z-index: 1;
   margin-right: 33px;
 
   @media (min-width: $tablet) {
@@ -73,7 +84,7 @@
     height: 33px;
     background-image: url("../../img/sprite/ruble.svg");
     bottom: 29px;
-    right: 4px;
+    right: -3px;
 
     @media (min-width: $tablet) {
       width: 30px;
@@ -101,6 +112,8 @@
   border: 2px solid $basic-blue;
   width: 196px;
   align-self: center;
+  transition: 0.3s;
+  position: relative;
 
   @media (min-width: $tablet) {
     width: 250px;
@@ -109,6 +122,31 @@
 
   @media (min-width: $desktop) {
     width: 194px;
+  }
+
+  &:hover:not([aria-disabled="true"]) {
+    border-color: transparent;
+    background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    color: $basic-white;
+    transition: 0.3s;
+  }
+
+  &:focus:not([aria-disabled="true"]) {
+    opacity: 0.8;
+    background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    color: $basic-white;
+    transition: 0.3s;
+  }
+
+  &:active:not([aria-disabled="true"]) {
+    background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    color: rgba(255, 255, 255, 0.7);
+    border-color: transparent;
+    transition: 0.3s;
+  }
+
+  &[aria-disabled="true"] {
+    opacity: 0.3;
   }
 }
 
@@ -123,5 +161,18 @@
 
   @media (min-width: $desktop) {
     left: -2px;
+  }
+}
+
+.card:hover,
+.card:focus-within {
+  background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  transition: 0.3s;
+
+  .card__link {
+    border-color: transparent;
+    background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    color: $basic-white;
+    transition: 0.3s;
   }
 }

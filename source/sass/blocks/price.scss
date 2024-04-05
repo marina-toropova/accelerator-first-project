@@ -69,9 +69,10 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
-  color: $light;
+  opacity: 0.5;
   padding-bottom: 17px;
   cursor: pointer;
+  position: relative;
 
   @media (min-width: $tablet) {
     font-size: 18px;
@@ -82,11 +83,18 @@
     font-size: 20px;
     line-height: 20px;
   }
-}
 
-.price__item.active {
-  color: $basic-blue;
-  position: relative;
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &[aria-disabled="true"] {
+    opacity: 0.3;
+  }
 
   &::after {
     position: absolute;
@@ -95,7 +103,7 @@
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: $button-tabs;
+    background-color: transparent;
 
     @media (min-width: $tablet) {
       bottom: 7px;
@@ -106,6 +114,32 @@
       bottom: 9px;
     }
   }
+}
+
+.price__item--active {
+  color: $basic-blue;
+  opacity: 1;
+
+  &::after,
+  &:hover.price__item:not([aria-disabled="true"])::after,
+  &:active.price__item:not([aria-disabled="true"])::after,
+  &:focus.price__item:not([aria-disabled="true"])::after {
+    background-color: $button-tabs;
+  }
+}
+
+.price__item:hover:not(.price__item--active)::after {
+  background-color: #787878;
+}
+
+.price__item:focus::after {
+  background-color: $basic-blue;
+}
+
+.price__item[aria-disabled="true"]::after,
+.price__item--active[aria-disabled="true"]::after {
+  opacity: 0.3;
+  background-color: $basic-blue;
 }
 
 .price__card-wrapper {
@@ -149,7 +183,7 @@
   }
 }
 
-.price__card-wrapper.active {
+.price__card-wrapper--active {
   display: flex;
 }
 

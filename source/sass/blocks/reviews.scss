@@ -58,16 +58,20 @@
   }
 
   @media (min-width: $desktop) {
-    width: 672px;
-    bottom: 209px;
-    left: -56px;
+    width: 711px;
+    bottom: 202px;
+    left: -75px;
   }
 }
 
-.reviews__swiper-button {
-  cursor: pointer;
-}
+.reviews__swiper-button[aria-disabled="true"],
+.reviews__swiper-button[aria-disabled="true"]:hover,
+.reviews__swiper-button[aria-disabled="true"]:active,
+.reviews__swiper-button[aria-disabled="true"]:focus {
+  border-color: transparent;
+  background-color: transparent;
 
-.reviews__swiper-button[aria-disabled="true"] {
-  opacity: 0.3;
+  use {
+    opacity: 0.3;
+  }
 }

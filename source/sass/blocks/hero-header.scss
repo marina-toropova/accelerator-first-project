@@ -4,6 +4,7 @@
   font-size: 22px;
   font-weight: 700;
   line-height: 22px;
+  transition: 0.3s;
 
   @media (min-width: $tablet) {
     font-size: 24px;
@@ -13,5 +14,35 @@
   @media (min-width: $desktop) {
     font-size: 26px;
     line-height: 26px;
+  }
+
+  &:hover {
+    color: rgba(28, 51, 116, 0.5);
+    transition: 0.3s;
+  }
+
+  &:focus {
+    color: $button-outline-blue;
+    transition: 0.3s;
+  }
+
+  &:active {
+    color: $basic-blue;
+    border-bottom: 1px solid $basic-blue;
+    transition: 0.3s;
+  }
+
+  &[aria-disabled="true"] {
+    opacity: 0.5;
+  }
+
+  &[aria-disabled="true"]:hover,
+  &[aria-disabled="true"]:focus,
+  &[aria-disabled="true"]:active {
+    background-color: inherit;
+    color: $basic-white;
+    pointer-events: none;
+    border: none;
+    cursor: default;
   }
 }

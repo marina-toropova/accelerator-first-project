@@ -68,6 +68,8 @@
 }
 
 .form__item {
+  position: relative;
+
   &--name {
     @media (min-width: $tablet) {
       grid-area: name;

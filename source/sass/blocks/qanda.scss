@@ -128,6 +128,29 @@
       top: 25px;
     }
   }
+
+  &:hover:not(:disabled) {
+    background-color: $basic-blue;
+    transition: 0.3s;
+
+    &::before,
+    &::after {
+      background-color: $basic-white;
+    }
+  }
+
+  &:focus:not(:disabled) {
+    background-color: $divider;
+
+    &::before,
+    &::after {
+      background-color: $basic-white;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 .qanda__button.active {
@@ -142,5 +165,14 @@
   &::after {
     transform: rotate(90deg);
     background-color: transparent;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &::after {
+      transform: rotate(90deg);
+      background-color: transparent;
+    }
   }
 }

@@ -19,19 +19,17 @@ const swiper = new Swiper('.jury__swiper', {
       slidesPerView: 1,
       spaceBetween: 20,
       initialSlide: 1,
+      navigation: false,
     },
 
     768: {
       slidesPerView: 2,
       spaceBetween: 40,
-      initialSlide: 3,
-      controller: {
-        inverse: true,
-      },
+      initialSlide: 4,
     },
 
     1366: {
-      initialSlide: 3,
+      initialSlide: 4,
       slidesPerView: 4,
       spaceBetween: 40
     }

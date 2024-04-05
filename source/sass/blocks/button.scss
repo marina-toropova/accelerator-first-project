@@ -1,0 +1,39 @@
+.button {
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  transition: 0.3s;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: transparent;
+  position: relative;
+
+  use {
+    stroke: $basic-blue;
+    fill: none;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $basic-blue;
+  }
+
+  &:focus {
+    background-color: $price-shadow;
+  }
+
+  &:active {
+    background-color: $basic-blue;
+
+    use {
+      stroke: $basic-white;
+    }
+  }
+}
+
+.button__image {
+  position: absolute;
+  top: 12px;
+  left: 18px;
+}
+

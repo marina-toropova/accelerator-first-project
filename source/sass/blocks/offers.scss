@@ -50,7 +50,7 @@
   background-color: $background-banner;
   color: $basic-white;
   text-align: center;
-  padding: 30px 0 36px;
+  padding: 30px 0 31px;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -139,10 +139,11 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 14px;
-  margin-top: 28px;
+  margin-top: 21px;
   position: relative;
   display: flex;
   align-self: center;
+  padding: 6px;
 
   @media (min-width: $tablet) {
     margin-top: 161px;
@@ -156,15 +157,16 @@
   &::after {
     position: absolute;
     content: "";
-    width: 73px;
+    width: 72px;
     height: 1px;
-    left: 0;
-    bottom: -6px;
+    left: 6px;
+    bottom: -1px;
     background-color: $basic-white;
   }
 
   &--deal {
     margin: 0;
+    margin-top: 14px;
   }
 
   &--free-month {
@@ -185,6 +187,28 @@
     @media (min-width: $desktop) {
       margin-top: 41px;
     }
+  }
+
+  &:hover:not([aria-disabled="true"]) {
+    opacity: 0.8;
+  }
+
+  &:focus:not([aria-disabled="true"]) {
+    outline: 1px solid white;
+
+    &::after {
+      background-color: transparent;
+    }
+  }
+
+  &:active:not([aria-disabled="true"]) {
+    color: inherit;
+    opacity: 1;
+  }
+
+  &[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: default;
   }
 }
 
@@ -227,14 +251,13 @@
 
 .offers__deal {
   text-align: center;
-  padding: 20px 0 26px;
+  padding: 20px;
   background-color: $basic-white;
   margin: 7px;
   width: 276px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 20px;
   color: $button-outline-blue;
 
   @media (min-width: $tablet) {
@@ -267,6 +290,7 @@
     font-size: 14px;
     line-height: 22px;
     width: 236px;
+    margin-top: 20px;
 
     @media (min-width: $tablet) {
       font-size: 16px;
@@ -288,4 +312,8 @@
       padding: 20px 20px 27px;
     }
   }
+}
+
+.offers__link--deal:focus:not([aria-disabled="true"]) {
+  outline-color: $button-outline-blue;
 }
