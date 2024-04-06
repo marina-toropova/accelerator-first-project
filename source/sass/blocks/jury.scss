@@ -95,6 +95,14 @@
     }
   }
 
+  &:nth-of-type(8) {
+    .jury__slide-title {
+      @media (min-width: $desktop) {
+        left: 43px;
+      }
+    }
+  }
+
   &:focus .jury__info {
     display: block;
     transition: 0.8s;

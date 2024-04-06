@@ -152,7 +152,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 157px;
+    margin-top: 150px;
   }
 
   &::after {
@@ -292,6 +292,10 @@
       width: auto;
       letter-spacing: -0.2px;
     }
+
+    @media (min-width: $desktop) {
+      letter-spacing: -0.1px;
+    }
   }
 
   &--discont {
@@ -300,7 +304,7 @@
     }
 
     @media (min-width: $desktop) {
-      padding: 18px 20px 27px;
+      padding: 20px 20px 21px;
     }
   }
 
@@ -310,7 +314,7 @@
     }
 
     @media (min-width: $desktop) {
-      padding: 20px 20px 27px;
+      padding: 20px 20px 10px;
     }
   }
 }
@@ -335,7 +339,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 39px;
+    margin: 33px 0 11px;
   }
 }
 
@@ -345,6 +349,18 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 41px;
+    margin-top: 34px;
+  }
+}
+
+.offers__deal--discont p {
+  @media (min-width: $desktop) {
+    margin-top: 9px;
+  }
+}
+
+.offers__deal--discont h3 {
+  @media (min-width: $desktop) {
+    letter-spacing: 0;
   }
 }
