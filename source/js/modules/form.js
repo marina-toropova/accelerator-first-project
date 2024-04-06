@@ -2,61 +2,70 @@ const nameInputField = document.querySelector('#name');
 const phoneInputField = document.querySelector('#phone');
 const formContainer = document.querySelector('.form');
 const form = formContainer.querySelector('form');
-const errorText = document.querySelector('.input__text');
-const errorClass = document.querySelector('.input__text--error');
+const errorTextPhone = phoneInputField.nextElementSibling;
+const errorTextName = nameInputField.nextElementSibling;
+const errorClass = 'input__text--error';
+const phoneRegExp = /^[ 0-9]+$/;
+const validateRegex = /^[a-zA-ZА-ЯЁа-яё ]*$/;
 
-function showError() {
+function showErrorPhone() {
   if (phoneInputField.validity.valueMissing) {
-    // Если поле пустое,
-    // отображаем следующее сообщение об ошибке
-    errorText.textContent = 'Введите, пожалуйста, номер телефона';
-  } else if (phoneInputField.validity.typeMismatch) {
-    // Если поле содержит не email-адрес,
-    // отображаем следующее сообщение об ошибке
-    errorText.textContent = 'Допускается вводить только цифры';
+    errorTextPhone.textContent = 'Введите, пожалуйста, номер телефона';
+  } else if (!phoneRegExp.test(phoneInputField.value)) {
+    errorTextPhone.textContent = 'Введите номер в формате 79998877666';
   } else if (phoneInputField.validity.tooShort) {
-    // Если содержимое слишком короткое,
-    // отображаем следующее сообщение об ошибке
-    errorText.textContent = `Email should be at least ${phoneInputField.minLength} characters; you entered ${phoneInputField.value.length}.`;
+    errorTextPhone.textContent = `Введите не менее ${phoneInputField.minLength} символов`;
   }
+}
 
-  // Задаём соответствующую стилизацию
-  errorText.classList.add(errorClass);
+function showErrorName() {
+  if (nameInputField.validity.valueMissing) {
+    errorTextName.textContent = 'Введите, пожалуйста, Ваше имя';
+  } else if (!nameInputField.validity.valueMissing) {
+    errorTextName.textContent = '';
+  }
 }
 
 const validateNameField = () => {
-  const validateRegex = /^[a-zA-Z ]*$/;
   nameInputField.addEventListener('input', (event) => {
     const inputValue = event.target.value;
     if (!validateRegex.test(inputValue)) {
-      event.target.value = inputValue.replace(/[^a-zA-Z ]/g, '');
+      event.target.value = inputValue.replace(/[^a-zA-ZА-ЯЁа-яё ]/g, '');
+      showErrorName();
     }
+
+    errorTextName.textContent = '';
   });
 };
 
 const validatePhoneField = () => {
-  phoneInputField.addEventListener('submit', () => {
+
+  phoneInputField.addEventListener('input', () => {
+
     if (phoneInputField.validity.valid) {
-      // Если на момент валидации какое-то сообщение об ошибке уже отображается,
-      // если поле валидно, удаляем сообщение
-      errorText.textContent = ''; // Сбросить содержимое сообщения
-      errorText.classList.remove(errorClass); // Сбросить визуальное состояние сообщения
+      errorTextPhone.textContent = '';
     } else {
-      // Если поле не валидно, показываем правильную ошибку
-      showError();
-    }
-  });
-
-  form.addEventListener('submit', (event) => {
-    // Если поле email валдно, позволяем форме отправляться
-
-    if (!phoneInputField.validity.valid) {
-      // Если поле email не валидно, отображаем соответствующее сообщение об ошибке
-      showError();
-      // Затем предотвращаем стандартное событие отправки формы
-      event.preventDefault();
+      showErrorPhone();
     }
   });
 };
 
-export { validateNameField, validatePhoneField, showError };
+const validateForm = () => {
+  form.addEventListener('submit', (event) => {
+    const isValid = phoneInputField.validity.valid && phoneRegExp.test(phoneInputField.value) && (!nameInputField.validity.valueMissing);
+
+    if (!isValid) {
+      showErrorPhone();
+      showErrorName();
+      event.preventDefault();
+    } else if (isValid) {
+      errorTextPhone.textContent = '';
+      errorTextName.value = '';
+      nameInputField.value = '';
+      phoneInputField.value = '';
+    }
+  }
+  );
+};
+
+export { validateNameField, validatePhoneField, validateForm };
