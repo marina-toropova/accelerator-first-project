@@ -4,7 +4,6 @@ const formContainer = document.querySelector('.form');
 const form = formContainer.querySelector('form');
 const errorTextPhone = phoneInputField.nextElementSibling;
 const errorTextName = nameInputField.nextElementSibling;
-const errorClass = 'input__text--error';
 const phoneRegExp = /^[ 0-9]+$/;
 const validateRegex = /^[a-zA-ZА-ЯЁа-яё ]*$/;
 

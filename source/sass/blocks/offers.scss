@@ -194,7 +194,7 @@
   }
 
   &:focus:not([aria-disabled="true"]) {
-    outline: 1px solid white;
+    outline: 1px solid $basic-white;
 
     &::after {
       background-color: transparent;

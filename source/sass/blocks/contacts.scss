@@ -147,8 +147,19 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  transition: 0.3s;
 
   &--tel {
     letter-spacing: -0.4px;
+  }
+
+  &:hover,
+  &:focus {
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }

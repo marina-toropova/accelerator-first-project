@@ -63,12 +63,12 @@
 .card__price {
   position: relative;
   margin: 0;
-  padding: 66px 9px 11px;
+  padding: 66px 0 11px;
   font-weight: 700;
   font-size: 48px;
   line-height: 72px;
   color: $text-additional-accent;
-  margin-right: 33px;
+  z-index: 1;
 
   @media (min-width: $tablet) {
     letter-spacing: -1px;
@@ -98,6 +98,21 @@
       right: -14px;
       bottom: 22px;
     }
+  }
+
+  &--shadow-1,
+  &--shadow-2,
+  &--shadow-3 {
+    margin-right: 34px;
+  }
+
+  &--shadow-4,
+  &--shadow-5,
+  &--shadow-6,
+  &--shadow-7,
+  &--shadow-8,
+  &--shadow-9 {
+    text-align: left;
   }
 }
 
@@ -157,11 +172,21 @@
     bottom: 2px;
     left: 22px;
     letter-spacing: -1px;
+    z-index: -1;
   }
 
   @media (min-width: $desktop) {
     left: -2px;
   }
+}
+
+.card__price--shadow-4::after,
+.card__price--shadow-5::after,
+.card__price--shadow-6::after,
+.card__price--shadow-7::after,
+.card__price--shadow-8::after,
+.card__price--shadow-9::after {
+  right: 14px;
 }
 
 .card:hover,
