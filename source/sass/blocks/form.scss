@@ -97,4 +97,9 @@
   font-weight: 400;
   left: 0;
   top: 32px;
+
+  @media (min-width: $tablet) {
+    width: 260px;
+    display: block;
+  }
 }

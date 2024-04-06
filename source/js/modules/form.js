@@ -6,6 +6,7 @@ const errorTextPhone = phoneInputField.nextElementSibling;
 const errorTextName = nameInputField.nextElementSibling;
 const phoneRegExp = /^[ 0-9]+$/;
 const validateRegex = /^[a-zA-ZА-ЯЁа-яё ]*$/;
+const submitButton = document.querySelector('.input--submit');
 
 function showErrorPhone() {
   if (phoneInputField.validity.valueMissing) {
@@ -34,6 +35,7 @@ const validateNameField = () => {
     }
 
     errorTextName.textContent = '';
+    submitButton.removeAttribute('disabled', 'disabled');
   });
 };
 
@@ -43,6 +45,7 @@ const validatePhoneField = () => {
 
     if (phoneInputField.validity.valid) {
       errorTextPhone.textContent = '';
+      submitButton.removeAttribute('disabled', 'disabled');
     } else {
       showErrorPhone();
     }
@@ -56,6 +59,7 @@ const validateForm = () => {
     if (!isValid) {
       showErrorPhone();
       showErrorName();
+      submitButton.setAttribute('disabled', 'disabled');
       event.preventDefault();
     } else if (isValid) {
       errorTextPhone.textContent = '';

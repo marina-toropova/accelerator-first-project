@@ -27,9 +27,34 @@
     text-transform: uppercase;
     border: 2px solid $basic-white;
     padding: 22px;
+    cursor: pointer;
+    transition: 0.3s;
 
     @media (min-width: $tablet) {
       padding: 25px;
+    }
+
+    &:hover:not(:disabled) {
+      color: $basic-blue;
+      background-color: $basic-white;
+      transition: 0.3s;
+    }
+
+    &:focus:not(:disabled) {
+      color: $basic-blue;
+      background: rgba(255, 255, 255, 0.8);
+      transition: 0.3s;
+      border-color: $basic-blue;
+    }
+
+    &:active:not(:disabled) {
+      color: $basic-blue;
+      background-color: $basic-white;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: default;
     }
   }
 

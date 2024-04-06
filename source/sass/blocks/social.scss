@@ -22,6 +22,7 @@
   height: 25px;
   border-radius: 50%;
   background-color: $basic-white;
+  transition: 0.3s;
 
   svg {
     position: absolute;
@@ -30,6 +31,37 @@
   }
 
   use {
+    fill: $background-footer;
+  }
+
+  &:hover:not([aria-disabled="true"]) {
+    background-color: $divider;
+    transition: 0.3s;
+  }
+
+  &:focus:not([aria-disabled="true"]) {
+    background-color: $text-additional-accent;
+    transition: 0.3s;
+  }
+
+  &:active:not([aria-disabled="true"]) {
+    background-color: $basic-blue;
+    transition: 0.3s;
+  }
+
+  &:hover:not([aria-disabled="true"]),
+  &:focus:not([aria-disabled="true"]),
+  &:active:not([aria-disabled="true"]) {
+    use {
+      fill: $basic-white;
+    }
+  }
+
+  &[aria-disabled="true"] {
+    background-color: rgba(16, 38, 84, 0.3);
+  }
+
+  &[aria-disabled="true"] use {
     fill: $background-footer;
   }
 }

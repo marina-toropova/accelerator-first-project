@@ -248,21 +248,25 @@
     padding: 25px 0;
   }
 
-  &:hover {
+  &:hover:not([aria-disabled="true"]) {
     color: $background-banner;
     background-color: $basic-white;
     transition: 0.3s;
   }
 
-  &:focus {
+  &:focus:not([aria-disabled="true"]) {
     color: $background-banner;
     background: rgba(255, 255, 255, 0.8);
     transition: 0.3s;
     border-color: $basic-blue;
   }
 
-  &:active {
+  &:active:not([aria-disabled="true"]) {
     color: $basic-blue;
     background-color: $basic-white;
+  }
+
+  &[aria-disabled="true"] {
+    opacity: 0.3;
   }
 }

@@ -25,6 +25,7 @@ const setPriceShadow = () => {
           .${uniqueClass}::before {
             font-size: 100px;
             line-height: 150px;
+            min-width: 300px;
           }
         }
       }

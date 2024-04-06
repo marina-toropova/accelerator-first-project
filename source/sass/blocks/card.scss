@@ -11,14 +11,13 @@
 
   @media (min-width: $tablet) {
     width: 380px;
-    padding: 65px;
+    padding: 7px;
     gap: 22px;
   }
 
   @media (min-width: $desktop) {
     width: 360px;
-    padding: 65px 78.5px;
-    gap: 18px;
+    padding: 7px;
   }
 }
 
@@ -30,6 +29,15 @@
   gap: 18px;
   position: relative;
   padding: 43px 42px;
+
+  @media (min-width: $tablet) {
+    padding: 57px 56px 59px;
+    gap: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 18px;
+  }
 }
 
 .card__heading {
@@ -170,9 +178,10 @@
     font-size: 100px;
     line-height: 150px;
     bottom: 2px;
-    left: 22px;
+    left: -22px;
     letter-spacing: -1px;
     z-index: -1;
+    min-width: 300px;
   }
 
   @media (min-width: $desktop) {
