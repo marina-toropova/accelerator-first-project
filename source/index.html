@@ -37,8 +37,10 @@
 
           <div class="hero-content__image">
             <picture>
-              <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/hero-img-desktop.jpg" width="500" height="524">
-              <img src="./img/hero-img.jpg" alt="Накачанный супермен." width="324" height="390">
+              <source type="image/webp" media="(min-width: 1366px)" srcset="./img/hero-img-desktop.webp 1x, ./img/hero-img-desktop@2x.webp 2x" width="500" height="524">
+              <source type="image/webp" srcset="./img/hero-img.webp 1x, ./img/hero-img@2x.webp 2x" width="324" height="390">
+              <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/hero-img-desktop.jpg 1x, ./img/hero-img-desktop@2x.jpg 2x" width="500" height="524">
+              <img src="./img/hero-img.jpg" srcset="./img/hero-img@2x.jpg" alt="Накачанный супермен." width="324" height="390" loading="lazy">
             </picture>
           </div>
 
@@ -58,6 +60,9 @@
             <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий</p>
           <div class="gym__image-container">
             <picture>
+              <source type="image/webp" media="(min-width: 1366px)" srcset="./img/gym-desktop.webp 1x, ./img/gym-desktop@2x.webp 2x" width="660" height="400">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/gym-tablet.webp 1x, ./img/gym-tablet@2x.webp 2x" width="678" height="345">
+              <source type="image/webp" srcset="./img/gym.webp 1x, ./img/gym@2x.webp 2x" width="320" height="280">
               <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/gym-desktop.jpg 1x, ./img/gym-desktop@2x.jpg 2x" width="660" height="400">
               <source type="image/jpg" media="(min-width: 768px)" srcset="./img/gym-tablet.jpg 1x, ./img/gym-tablet@2x.jpg 2x" width="678" height="345">
               <img class="gym__image" src="./img/gym.jpg" alt="Тренажерный зал SyperGym." srcset="./img/gym@2x.jpg" width="320" height="280">
@@ -66,6 +71,9 @@
           <div class="gym__video-container video video--nojs">
             <a class="video-link" href="https://www.youtube.com/watch?v=9TZXsZItgdw" target="_blank"  rel="noreferrernoopener">
               <picture>
+                <source type="image/webp" media="(min-width: 1366px)" srcset="./img/video-preview-desktop.webp 1x, ./img/video-preview-desktop@2x.webp 2x" width="360" height="230">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/video-preview-tablet.webp 1x, ./img/video-preview-tablet@2x.webp 2x" width="270" height="170">
+                <source type="image/webp" srcset="./img/video-preview.webp 1x, ./img/video-preview@2x.webp 2x" width="320" height="170">
                 <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/video-preview-desktop.jpg 1x, ./img/video-preview-desktop@2x.jpg 2x" width="360" height="230">
                 <source type="image/jpg" media="(min-width: 768px)" srcset="./img/video-preview-tablet.jpg 1x, ./img/video-preview-tablet@2x.jpg 2x" width="270" height="170">
                 <img class="video__image" src="./img/video-preview.jpg" srcset="./img/video-preview@2x.jpg" alt="Превью видео про тренажерный зал." width="320" height="170">
@@ -207,7 +215,9 @@
             <a class="games__link" href="#">Заполнить заявку</a>
           </div>
           <div class="games__image-wrapper">
-            <picture>
+            <picture><source type="image/webp" media="(min-width: 1366px)" srcset="./img/photo-games-desktop.webp 1x, ./img/photo-games-desktop@2x.webp 2x" width="660" height="500">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-games-tablet.webp 1x, ./img/photo-games-tablet@2x.webp 2x" width="378" height="348">
+              <source type="image/webp" srcset="./img/photo-games.webp 1x, ./img/photo-games@2x.webp 2x" width="290" height="290">
               <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/photo-games-desktop.jpg 1x, ./img/photo-games-desktop@2x.jpg 2x" width="660" height="500">
               <source type="image/jpg" media="(min-width: 768px)" srcset="./img/photo-games-tablet.jpg 1x, ./img/photo-games-tablet@2x.jpg 2x" width="378" height="348">
               <img class="games__photo" src="./img/photo-games.jpg" srcset="./img/photo-games@2x.jpg" alt="Мужчина, который пользуется тальком для рук." width="290" height="290">
@@ -223,84 +233,11 @@
         <div class="jury__swiper swiper">
 
           <ul class="jury__wrapper swiper-wrapper">
+
             <li class="jury__slide swiper-slide">
               <h3 class="jury__slide-title">Анна Павлова</h3>
               <picture>
-                <img src="./img/slide-1-1.jpg" srcset="./img/slide-1-1@2x.jpg" alt="Анна Павлова - член жюри." width="227" height="280" loading="lazy">
-              </picture>
-              <div class="jury__info">
-                <h4>Анна Павлова</h4>
-                <h5>CrossFit</h5>
-                <ul>
-                  <li>Certified Level 3 Trainer</li>
-                  <li>Победитель чемпионата России по CrossFit</li>
-                  <li>Опыт — 6 лет</li>
-                </ul>
-              </div>
-            </li>
-            <li class="jury__slide swiper-slide">
-              <h3 class="jury__slide-title">Алексей Лавров</h3>
-              <picture>
-                <img src="./img/slide-2.jpg" srcset="./img/slide-2@2x.jpg" alt="Алексей Лавров - член жюри." width="227" height="280" loading="lazy">
-              </picture>
-              <div class="jury__info">
-                <h4>Алексей Лавров</h4>
-                <h5>CrossFit</h5>
-                <ul>
-                  <li>Certified Level 2 Trainer</li>
-                  <li>Победитель чемпионата Европы по CrossFit</li>
-                  <li>Опыт — 5 лет</li>
-                </ul>
-              </div>
-            </li>
-            <li class="jury__slide swiper-slide">
-                <h3 class="jury__slide-title">Александр Пашков</h3>
-                <picture>
-                  <img src="./img/slide-1.jpg" srcset="./img/slide-1@2x.jpg" alt="Александр Пашков - член жюри." width="227" height="280" loading="lazy">
-                </picture>
-                <div class="jury__info">
-                  <h4>Александр Пашков</h4>
-                  <h5>CrossFit</h5>
-                  <ul>
-                    <li>Certified Level 5 Trainer</li>
-                    <li>Победитель чемпионата Свердловской области по CrossFit</li>
-                    <li>Опыт — 4 года</li>
-                  </ul>
-                </div>
-            </li>
-            <li class="jury__slide swiper-slide">
-                <h3 class="jury__slide-title">Мария Кетова</h3>
-                <picture>
-                  <img src="./img/slide-4.jpg" srcset="./img/slide-4@2x.jpg" alt="Мария Кетова - член жюри." width="227" height="280" loading="lazy">
-                </picture>
-                <div class="jury__info">
-                  <h4>Мария Кетова</h4>
-                  <h5>Пилатес</h5>
-                  <ul>
-                    <li>Certified Level 12 Trainer</li>
-                    <li>Победитель чемпионата мира по пилатесу</li>
-                    <li>Опыт — 8 лет</li>
-                  </ul>
-                </div>
-            </li>
-            <li class="jury__slide swiper-slide">
-              <h3 class="jury__slide-title">Алиса Лаврова</h3>
-              <picture>
-                <img src="./img/slide-5-1.jpg" srcset="./img/slide-5-1@2x.jpg" alt="Алиса Лаврова - член жюри." width="227" height="280" loading="lazy">
-              </picture>
-              <div class="jury__info">
-                <h4>Алексей Лавров</h4>
-                <h5>CrossFit</h5>
-                <ul>
-                  <li>Certified Level 2 Trainer</li>
-                  <li>Победитель чемпионата Европы по CrossFit</li>
-                  <li>Опыт — 5 лет</li>
-                </ul>
-              </div>
-            </li>
-            <li class="jury__slide swiper-slide">
-              <h3 class="jury__slide-title">Анна Павлова</h3>
-              <picture>
+                <source type="image/webp" srcset="./img/slide-3.webp 1x, ./img/slide-3@2x.webp 2x" width="227" height="280">
                 <img src="./img/slide-3.jpg" srcset="./img/slide-3@2x.jpg" alt="Анна Павлова - член жюри." width="227" height="280" loading="lazy">
               </picture>
               <div class="jury__info">
@@ -313,9 +250,11 @@
                 </ul>
               </div>
             </li>
+
             <li class="jury__slide swiper-slide">
               <h3 class="jury__slide-title">Алексей Лавров</h3>
               <picture>
+                <source type="image/webp" srcset="./img/slide-2.webp 1x, ./img/slide-2@2x.webp 2x" width="227" height="280">
                 <img src="./img/slide-2.jpg" srcset="./img/slide-2@2x.jpg" alt="Алексей Лавров - член жюри." width="227" height="280" loading="lazy">
               </picture>
               <div class="jury__info">
@@ -328,9 +267,79 @@
                 </ul>
               </div>
             </li>
+
+            <li class="jury__slide swiper-slide">
+                <h3 class="jury__slide-title">Александр Пашков</h3>
+                <picture>
+                  <source type="image/webp" srcset="./img/slide-1.webp 1x, ./img/slide-1@2x.webp 2x" width="227" height="280">
+                  <img src="./img/slide-1.jpg" srcset="./img/slide-1@2x.jpg" alt="Александр Пашков - член жюри." width="227" height="280" loading="lazy">
+                </picture>
+                <div class="jury__info">
+                  <h4>Александр Пашков</h4>
+                  <h5>CrossFit</h5>
+                  <ul>
+                    <li>Certified Level 5 Trainer</li>
+                    <li>Победитель чемпионата Свердловской области по CrossFit</li>
+                    <li>Опыт — 4 года</li>
+                  </ul>
+                </div>
+            </li>
+
+            <li class="jury__slide swiper-slide">
+                <h3 class="jury__slide-title">Мария Кетова</h3>
+                <picture>
+                  <source type="image/webp" srcset="./img/slide-4.webp 1x, ./img/slide-4@2x.webp 2x" width="227" height="280">
+                  <img src="./img/slide-4.jpg" srcset="./img/slide-4@2x.jpg" alt="Мария Кетова - член жюри." width="227" height="280" loading="lazy">
+                </picture>
+                <div class="jury__info">
+                  <h4>Мария Кетова</h4>
+                  <h5>Пилатес</h5>
+                  <ul>
+                    <li>Certified Level 12 Trainer</li>
+                    <li>Победитель чемпионата мира по пилатесу</li>
+                    <li>Опыт — 8 лет</li>
+                  </ul>
+                </div>
+            </li>
+
+            <li class="jury__slide swiper-slide">
+              <h3 class="jury__slide-title">Анна Павлова</h3>
+              <picture>
+                <source type="image/webp" srcset="./img/slide-5-1.webp 1x, ./img/slide-5-1@2x.webp 2x" width="227" height="280">
+                <img src="./img/slide-5-1.jpg" srcset="./img/slide-5-1@2x.jpg" alt="Анна Павлова - член жюри." width="227" height="280" loading="lazy">
+              </picture>
+              <div class="jury__info">
+                <h4>Алексей Лавров</h4>
+                <h5>CrossFit</h5>
+                <ul>
+                  <li>Certified Level 2 Trainer</li>
+                  <li>Победитель чемпионата Европы по CrossFit</li>
+                  <li>Опыт — 5 лет</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="jury__slide swiper-slide">
+              <h3 class="jury__slide-title">Алексей Лавров</h3>
+              <picture>
+                <source type="image/webp" srcset="./img/slide-2.webp 1x, ./img/slide-2@2x.webp 2x" width="227" height="280">
+                <img src="./img/slide-2.jpg" srcset="./img/slide-2@2x.jpg" alt="Алексей Лавров - член жюри." width="227" height="280" loading="lazy">
+              </picture>
+              <div class="jury__info">
+                <h4>Алексей Лавров</h4>
+                <h5>CrossFit</h5>
+                <ul>
+                  <li>Certified Level 2 Trainer</li>
+                  <li>Победитель чемпионата Европы по CrossFit</li>
+                  <li>Опыт — 5 лет</li>
+                </ul>
+              </div>
+            </li>
+
             <li class="jury__slide swiper-slide">
               <h3 class="jury__slide-title">Александр Пашков</h3>
               <picture>
+                <source type="image/webp" srcset="./img/slide-1.webp 1x, ./img/slide-1@2x.webp 2x" width="227" height="280">
                 <img src="./img/slide-1.jpg" srcset="./img/slide-1@2x.jpg" alt="Александр Пашков - член жюри." width="227" height="280" loading="lazy">
               </picture>
               <div class="jury__info">
@@ -343,18 +352,20 @@
                 </ul>
               </div>
             </li>
+
             <li class="jury__slide swiper-slide">
               <h3 class="jury__slide-title">Мария Кетова</h3>
               <picture>
-                <img src="./img/slide-4.jpg" srcset="./img/slide-4@2x.jpg" alt="Мария Кетова - член жюри." width="227" height="280" loading="lazy">
+                <source type="image/webp" srcset="./img/slide-1-1.webp 1x, ./img/slide-1-1@2x.webp 2x" width="227" height="280">
+                <img src="./img/slide-1-1.jpg" srcset="./img/slide-1-1@2x.jpg" alt="Мария Кетова - член жюри." width="227" height="280" loading="lazy">
               </picture>
               <div class="jury__info">
-                <h4>Мария Кетова</h4>
-                <h5>Пилатес</h5>
+                <h4>Анна Павлова</h4>
+                <h5>CrossFit</h5>
                 <ul>
-                  <li>Certified Level 12 Trainer</li>
-                  <li>Победитель чемпионата мира по пилатесу</li>
-                  <li>Опыт — 8 лет</li>
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit</li>
+                  <li>Опыт — 6 лет</li>
                 </ul>
               </div>
             </li>
@@ -362,25 +373,26 @@
 
         </div>
 
-                <!-- If we need navigation buttons -->
-                <div class="jury__buttons-wrapper">
-                  <div class="jury__button jury__button--prev swiper-button-prev button button--prev">
-                    <span class="visually-hidden">Предыдущий слайд.</span>
-                    <span class="button__image button__image--left">
-                      <svg width="17" height="32">
-                        <use href="/__spritemap#sprite-arrow-left"></use>
-                      </svg>
-                    </span>
-                  </div>
-                  <div class="jury__button jury__button--next swiper-button-next button button--next">
-                    <span class="visually-hidden">Следующий слайд.</span>
-                    <span class="button__image button__image--right">
-                      <svg width="17" height="32">
-                        <use href="/__spritemap#sprite-arrow-right"></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
+        <div class="jury__buttons-wrapper">
+          <div class="jury__button jury__button--prev swiper-button-prev button button--prev">
+            <span class="visually-hidden">Предыдущий слайд.</span>
+              <span class="button__image button__image--left">
+                <svg width="17" height="32">
+                  <use href="/__spritemap#sprite-arrow-left"></use>
+                </svg>
+              </span>
+          </div>
+
+          <div class="jury__button jury__button--next swiper-button-next button button--next">
+            <span class="visually-hidden">Следующий слайд.</span>
+            <span class="button__image button__image--right">
+              <svg width="17" height="32">
+                <use href="/__spritemap#sprite-arrow-right"></use>
+              </svg>
+            </span>
+          </div>
+        </div>
+
       </div>
       </section>
 
@@ -441,6 +453,9 @@
           </div>
           <div class="offers__image">
             <picture>
+              <source type="image/webp" media="(min-width: 1366px)" srcset="./img/girl-img-desktop.webp 1x, ./img/girl-img-desktop@2x.webp 2x" width="280" height="460">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/girl-img-tablet.webp 1x, ./img/girl-img-tablet@2x.webp 2x" width="400" height="462">
+              <source type="image/webp" srcset="./img/girl-img.webp 1x, ./img/girl-img@2x.webp 2x" width="320" height="360">
               <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/girl-img-desktop.jpg 1x, ./img/girl-img-desktop@2x.jpg 2x" width="280" height="460">
               <source type="image/jpg" media="(min-width: 768px)" srcset="./img/girl-img-tablet.jpg 1x, ./img/girl-img-tablet@2x.jpg 2x" width="400" height="462">
               <img src="./img/girl-img.jpg" srcset="./img/girl-img@2x.jpg" alt="Девушка в спортивном костюме на фоне неба." width="320" height="360">
@@ -584,19 +599,30 @@
                 <li class="reviews__swiper-slide review-card swiper-slide">
                   <h3>Анна Орлова</h3>
                   <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-                  <img src="./img/review.jpg" srcset="./img/review@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                  <div>
+                    <picture>
+                      <source type="image/webp" media="(min-width: 768px)" srcset="./img/review-tablet.webp 1x, ./img/review-tablet@2x.webp 2x" width="80" height="80">
+                      <source type="image/webp" srcset="./img/review.webp 1x, ./img/review@2x.webp 2x" width="68" height="68">
+                      <source type="image/jpg" media="(min-width: 768px)" srcset="./img/review-tablet.jpg 1x, ./img/review-tablet@2x.jpg 2x" width="80" height="80">
+                      <img src="./img/review.jpg" srcset="./img/review@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                    </picture>
+                  </div>
                 </li>
 
                 <li class="reviews__swiper-slide review-card swiper-slide">
                   <h3>Кристина Смирнова</h3>
                   <p>«Много лет посещаю данный зал. Отличные тренажёры, талантливые тренеры, есть детская комната. Часто проводят акции, цены доступные.»</p>
-                  <img src="./img/review-2.jpg" srcset="./img/review-2@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                  <div>
+                    <picture>
+                      <source type="image/webp" srcset="./img/review-2.webp 1x, ./img/review-2@2x.webp 2x" width="68" height="68">
+                      <img src="./img/review-2.jpg" srcset="./img/review-2@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                    </picture>
+                  </div>
                 </li>
 
               </ul>
             </div>
 
-          <!-- If we need navigation buttons -->
           <div class="reviews__buttons-wrapper">
             <div class="reviews__swiper-button reviews__swiper-button--prev swiper-button-prev button button--prev">
               <span class="visually-hidden">Предыдущий слайд.</span>
@@ -731,6 +757,7 @@
         </ul>
       </div>
     </footer>
+
     <script type="module" src="js/main.js"></script>
   </body>
 

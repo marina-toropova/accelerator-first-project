@@ -48,13 +48,14 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 30px;
+  position: relative;
 
   @media (min-width: $tablet) {
     margin: 35px auto;
     justify-content: center;
     gap: 43px;
     width: 310px;
-    height: 28px; // изменить
+    border-color: transparent;
   }
 
   @media (min-width: $desktop) {
@@ -62,6 +63,24 @@
     gap: 50px;
     width: 350px;
     min-height: 28px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    left: 0;
+    bottom: 7px;
+
+    @media (min-width: $tablet) {
+      background-color: rgba(120, 120, 120, 0.2);
+    }
+
+    @media (min-width: $desktop) {
+      bottom: 9px;
+    }
   }
 }
 
@@ -151,14 +170,14 @@
   display: none;
 
   @media (min-width: $tablet) {
-    margin-top: 45px;
+    margin-top: 37px;
     gap: 40px;
     position: relative;
     z-index: 0;
   }
 
   @media (min-width: $desktop) {
-    margin-top: 40px;
+    margin-top: 29px;
   }
 }
 

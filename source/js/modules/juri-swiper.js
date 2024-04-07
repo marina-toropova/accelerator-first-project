@@ -18,18 +18,18 @@ const swiper = new Swiper('.jury__swiper', {
     320: {
       slidesPerView: 1,
       spaceBetween: 20,
-      initialSlide: 1,
+      initialSlide: 2,
       navigation: false,
     },
 
     768: {
       slidesPerView: 2,
       spaceBetween: 40,
-      initialSlide: 4,
+      initialSlide: 0,
     },
 
     1366: {
-      initialSlide: 4,
+      initialSlide: 0,
       slidesPerView: 4,
       spaceBetween: 40
     }

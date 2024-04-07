@@ -31,7 +31,6 @@ const setPriceShadow = () => {
       }
     `;
 
-    // Добавляем класс к элементу с ценой
     priceElement.classList.add(uniqueClass);
 
     const styleElement = document.createElement('style');

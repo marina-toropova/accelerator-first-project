@@ -64,11 +64,10 @@ const validateForm = () => {
     } else if (isValid) {
       errorTextPhone.textContent = '';
       errorTextName.value = '';
-      nameInputField.value = '';
-      phoneInputField.value = '';
     }
   }
   );
 };
+
 
 export { validateNameField, validatePhoneField, validateForm };

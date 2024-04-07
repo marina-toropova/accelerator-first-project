@@ -62,36 +62,29 @@ function playAccordion(buttonClass, startTitleContainer, startButton, activeClas
 
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
-      const answer = button.nextElementSibling;
       const isActive = button.classList.contains(activeClass);
 
       if (!isActive) {
         button.classList.add(activeClass);
-        answer.classList.add(activeClass);
       } else {
         button.classList.remove(activeClass);
-        answer.classList.remove(activeClass);
       }
     });
 
     button.addEventListener('keydown', (key) => {
       if (key === 'Enter' || key === ' ') {
-        const answer = button.nextElementSibling;
         const isActive = button.classList.contains(activeClass);
 
         if (!isActive) {
           button.classList.add(activeClass);
-          answer.classList.add(activeClass);
         } else {
           button.classList.remove(activeClass);
-          answer.classList.remove(activeClass);
         }
       }
     });
   });
 
   openbutton.classList.add(activeClass);
-  openbutton.nextElementSibling.classList.add(activeClass);
 }
 
 

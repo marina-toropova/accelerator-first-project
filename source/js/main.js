@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
   faqTabs();
   playAccordionFaq();
   reviewsSwiper.init();
+  jurySwiper.init();
 });
 
 setPriceShadow();
-jurySwiper.slideNext();
 validateNameField();
 validatePhoneField();
 validateForm();
