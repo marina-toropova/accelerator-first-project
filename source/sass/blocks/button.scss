@@ -13,6 +13,50 @@
     fill: none;
   }
 
+  &--submit {
+    width: 100%;
+    background: transparent;
+    color: $basic-white;
+    position: relative;
+    appearance: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    border: 2px solid $basic-white;
+    padding: 22px 0 34px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0%;
+
+    @media (min-width: $tablet) {
+      padding: 25px 0 37px;
+    }
+
+    &:hover:not(:disabled) {
+      color: $basic-blue;
+      background-color: $basic-white;
+      transition: 0.3s;
+    }
+
+    &:focus:not(:disabled) {
+      color: $basic-blue;
+      background: rgba(255, 255, 255, 0.8);
+      transition: 0.3s;
+      border-color: $basic-blue;
+    }
+
+    &:active:not(:disabled) {
+      color: $basic-blue;
+      background-color: $basic-white;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+  }
+
   &:hover,
   &:focus {
     border: 1px solid $basic-blue;

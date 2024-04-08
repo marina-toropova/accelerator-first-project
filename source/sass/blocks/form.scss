@@ -89,6 +89,46 @@
   }
 }
 
+.form__item input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding-bottom: 7px;
+  border-bottom: 1px solid $divider;
+  color: $basic-white;
+  position: relative;
+  appearance: none;
+
+  &::placeholder {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    color: $basic-white;
+    opacity: 0.3;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: $basic-white;
+  }
+
+  &:focus:not(:disabled) {
+    outline: 1px solid $basic-white;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    border-color: $error;
+    outline: none;
+  }
+}
+
+.form__item--phone input {
+  padding-bottom: 6px;
+}
+
 .form__text-error {
   position: absolute;
   color: $error;

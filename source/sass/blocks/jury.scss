@@ -64,12 +64,14 @@
   }
 
   @media (min-width: $desktop) {
-    &:hover .jury__info {
+    &:hover .jury__info,
+    &:focus-within .jury__info {
       display: block;
     }
   }
 
   img {
+    width: 227px;
     height: 280px;
     object-fit: cover;
 
@@ -79,23 +81,15 @@
     }
   }
 
-  &:nth-of-type(6) {
+  &:nth-of-type(2) {
     @media (min-width: $tablet) {
       .jury__slide-title {
-        left: 66px;
+        left: 56px;
       }
     }
   }
 
-  &:nth-of-type(7) {
-    @media (min-width: $desktop) {
-      .jury__slide-title {
-        left: 43px;
-      }
-    }
-  }
-
-  &:nth-of-type(8) {
+  &:nth-of-type(3) {
     .jury__slide-title {
       @media (min-width: $desktop) {
         left: 43px;
@@ -141,32 +135,6 @@
   top: 0;
   color: $basic-white;
   padding: 45px 42px;
-
-  h4 {
-    font-size: 22px;
-    line-height: 22px;
-    font-weight: 400;
-    text-align: center;
-    margin: 0;
-  }
-
-  h5 {
-    margin: 0;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
-    color: #b6bdcc;
-    text-align: center;
-    margin-top: 8px;
-  }
-
-  ul {
-    list-style-type: disc;
-    margin-top: 33px;
-    padding-left: 10px;
-    display: grid;
-    row-gap: 12px;
-  }
 }
 
 .jury__buttons-wrapper {

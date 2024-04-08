@@ -22,7 +22,7 @@
   grid-template-areas:
     "list title"
     "link link";
-  row-gap: 48px;
+  row-gap: 46px;
   column-gap: 21px;
   padding: 48px 0 30px;
 
@@ -41,7 +41,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 26px 0 116px;
+    padding: 28px 0 116px;
     grid-template-areas:
       ".    .     . image"
       "list title . image"

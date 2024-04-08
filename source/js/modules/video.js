@@ -1,7 +1,7 @@
 const video = document.querySelector('.video');
 
 function setupVideo() {
-  const link = video.querySelector('.video-link');
+  const link = video.querySelector('.video__link');
   const button = video.querySelector('.video__button');
 
   button.addEventListener('click', () => {

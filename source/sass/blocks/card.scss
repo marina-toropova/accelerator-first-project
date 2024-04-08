@@ -71,18 +71,23 @@
 .card__price {
   position: relative;
   margin: 0;
-  padding: 66px 0 11px;
+  padding: 66px 0 11px 29px;
   font-weight: 700;
   font-size: 48px;
   line-height: 72px;
   color: $text-additional-accent;
   z-index: 1;
+  align-self: self-start;
 
   @media (min-width: $tablet) {
     letter-spacing: -1px;
-    padding: 58px 27px 0 18px;
+    padding: 58px 27px 0 43px;
     font-size: 60px;
     line-height: 90px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 58px 27px 0 33px;
   }
 
   &::after {
@@ -92,35 +97,20 @@
     height: 33px;
     background-image: url("../../img/sprite/ruble.svg");
     bottom: 29px;
-    right: -3px;
+    right: -32px;
 
     @media (min-width: $tablet) {
       width: 30px;
       height: 42px;
       background-size: cover;
       bottom: 23px;
-      right: 9px;
+      right: -18px;
     }
 
     @media (min-width: $desktop) {
-      right: 0;
+      right: -18px;
       bottom: 22px;
     }
-  }
-
-  &--shadow-1,
-  &--shadow-2,
-  &--shadow-3 {
-    margin-right: 34px;
-  }
-
-  &--shadow-4,
-  &--shadow-5,
-  &--shadow-6,
-  &--shadow-7,
-  &--shadow-8,
-  &--shadow-9 {
-    text-align: left;
   }
 }
 
@@ -170,10 +160,22 @@
 
   &[aria-disabled="true"] {
     opacity: 0.3;
+    pointer-events: none;
   }
 }
 
 .card .card__price::before {
+  content: attr(data-price);
+  position: absolute;
+  bottom: 43px;
+  left: -35px;
+  font-weight: 700;
+  font-size: 80px;
+  color: #e8e8e8;
+  pointer-events: none;
+  z-index: -1;
+  min-width: 260px;
+
   @media (min-width: $tablet) {
     font-size: 100px;
     line-height: 150px;
@@ -187,15 +189,6 @@
   @media (min-width: $desktop) {
     left: -33px;
   }
-}
-
-.card__price--shadow-4::after,
-.card__price--shadow-5::after,
-.card__price--shadow-6::after,
-.card__price--shadow-7::after,
-.card__price--shadow-8::after,
-.card__price--shadow-9::after {
-  right: 14px;
 }
 
 .card:hover,

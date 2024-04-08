@@ -7,7 +7,7 @@
 
   @media (min-width: $tablet) {
     display: flex;
-    padding: 60px 0 30px;
+    padding: 59px 0 30px;
   }
 
   @media (min-width: $desktop) {
@@ -157,6 +157,8 @@
 }
 
 .games__image-wrapper {
+  background-image: url("../../img/photo-games");
+
   @media (min-width: $tablet) {
     height: 348px;
   }

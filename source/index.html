@@ -4,7 +4,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUPERGYM</title>
+    <meta name="description" content="SUPERGYM - GYM for heroes.">
+    <title>SUPERGYM</title><link rel="preload" href="fonts/lato/lato-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/alumni-sans/alumniSans-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/alumni-sans/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/alumni-sans/alumniSans-extrabold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed/Roboto-Condensed-Regular.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed/Roboto-Condensed-Bold.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed/RobotoCondensed-VariableFont_wght.woff2" as="font" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico"><!-- 32×32 -->
     <link rel="icon" href="img/favicons/favicon.png" type="image/png">
     <link rel="stylesheet" href="sass/style.scss">
@@ -65,18 +72,18 @@
               <source type="image/webp" srcset="./img/gym.webp 1x, ./img/gym@2x.webp 2x" width="320" height="280">
               <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/gym-desktop.jpg 1x, ./img/gym-desktop@2x.jpg 2x" width="660" height="400">
               <source type="image/jpg" media="(min-width: 768px)" srcset="./img/gym-tablet.jpg 1x, ./img/gym-tablet@2x.jpg 2x" width="678" height="345">
-              <img class="gym__image" src="./img/gym.jpg" alt="Тренажерный зал SyperGym." srcset="./img/gym@2x.jpg" width="320" height="280">
+              <img src="./img/gym.jpg" alt="Тренажерный зал SyperGym." srcset="./img/gym@2x.jpg" width="320" height="280">
             </picture>
           </div>
           <div class="gym__video-container video video--nojs">
-            <a class="video-link" href="https://www.youtube.com/watch?v=9TZXsZItgdw" target="_blank"  rel="noreferrernoopener">
+            <a class="video__link" href="https://www.youtube.com/watch?v=9TZXsZItgdw" target="_blank"  rel="noreferrernoopener">
               <picture>
                 <source type="image/webp" media="(min-width: 1366px)" srcset="./img/video-preview-desktop.webp 1x, ./img/video-preview-desktop@2x.webp 2x" width="360" height="230">
                 <source type="image/webp" media="(min-width: 768px)" srcset="./img/video-preview-tablet.webp 1x, ./img/video-preview-tablet@2x.webp 2x" width="270" height="170">
                 <source type="image/webp" srcset="./img/video-preview.webp 1x, ./img/video-preview@2x.webp 2x" width="320" height="170">
                 <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/video-preview-desktop.jpg 1x, ./img/video-preview-desktop@2x.jpg 2x" width="360" height="230">
                 <source type="image/jpg" media="(min-width: 768px)" srcset="./img/video-preview-tablet.jpg 1x, ./img/video-preview-tablet@2x.jpg 2x" width="270" height="170">
-                <img class="video__image" src="./img/video-preview.jpg" srcset="./img/video-preview@2x.jpg" alt="Превью видео про тренажерный зал." width="320" height="170">
+                <img src="./img/video-preview.jpg" srcset="./img/video-preview@2x.jpg" alt="Превью видео про тренажерный зал." width="320" height="170">
               </picture>
             </a>
             <button class="video__button" type="button">
@@ -106,7 +113,7 @@
               <div class="card__inner-wrapper">
                 <p class="card__heading">С тренером</p>
                 <p class="card__number-of-sessions">12 занятий</p>
-                <p class="card__price">5000</p>
+                <p class="card__price" data-price="5000">5000</p>
                 <a class="card__link" href="#">Купить абонемент</a>
               </div>
             </li>
@@ -115,7 +122,7 @@
               <div class="card__inner-wrapper">
                 <p class="card__heading">Дневной</p>
                 <p class="card__number-of-sessions">с 8:00 до 17:00</p>
-                <p class="card__price">1700</p>
+                <p class="card__price" data-price="1700">1700</p>
                 <a class="card__link" href="#">Купить абонемент</a>
               </div>
             </li>
@@ -124,7 +131,7 @@
               <div class="card__inner-wrapper">
                 <p class="card__heading">Полный день</p>
                 <p class="card__number-of-sessions">с 8:00 до 22:00</p>
-                <p class="card__price">2700</p>
+                <p class="card__price" data-price="2700">2700</p>
                 <a class="card__link" href="#">Купить абонемент</a>
               </div>
             </li>
@@ -137,7 +144,7 @@
               <div class="card__inner-wrapper">
                 <p class="card__heading">С тренером</p>
                 <p class="card__number-of-sessions">12 занятий</p>
-                <p class="card__price">30000</p>
+                <p class="card__price" data-price="30000">30000</p>
                 <a class="card__link" href="#">Купить абонемент</a>
               </div>
             </li>
@@ -146,7 +153,7 @@
               <div class="card__inner-wrapper">
                 <p class="card__heading">Дневной</p>
                 <p class="card__number-of-sessions">с 8:00 до 17:00</p>
-                <p class="card__price">10 200</p>
+                <p class="card__price" data-price="10 200">10 200</p>
                 <a class="card__link" href="#">Купить абонемент</a>
               </div>
             </li>
@@ -155,7 +162,7 @@
               <div class="card__inner-wrapper">
                 <p class="card__heading">Полный день</p>
                 <p class="card__number-of-sessions">с 8:00 до 22:00</p>
-                <p class="card__price">16 200</p>
+                <p class="card__price" data-price="16 200">16 200</p>
                 <a class="card__link" href="#">Купить абонемент</a>
               </div>
             </li>
@@ -168,7 +175,7 @@
               <div class="card__inner-wrapper">
                 <p class="card__heading">С тренером</p>
                 <p class="card__number-of-sessions">12 занятий</p>
-                <p class="card__price">60 000</p>
+                <p class="card__price" data-price="60 000">60 000</p>
                 <a class="card__link" href="#">Купить абонемент</a>
               </div>
             </li>
@@ -177,7 +184,7 @@
               <div class="card__inner-wrapper">
                 <p class="card__heading">Дневной</p>
                 <p class="card__number-of-sessions">с 8:00 до 17:00</p>
-                <p class="card__price">20 400</p>
+                <p class="card__price" data-price="20 400">20 400</p>
                 <a class="card__link" href="#">Купить абонемент</a>
               </div>
             </li>
@@ -186,7 +193,7 @@
               <div class="card__inner-wrapper">
                 <p class="card__heading">Полный день</p>
                 <p class="card__number-of-sessions">с 8:00 до 22:00</p>
-                <p class="card__price">32 400</p>
+                <p class="card__price" data-price="32 400">32 400</p>
                 <a class="card__link" href="#">Купить абонемент</a>
               </div>
             </li>
@@ -215,7 +222,8 @@
             <a class="games__link" href="#">Заполнить заявку</a>
           </div>
           <div class="games__image-wrapper">
-            <picture><source type="image/webp" media="(min-width: 1366px)" srcset="./img/photo-games-desktop.webp 1x, ./img/photo-games-desktop@2x.webp 2x" width="660" height="500">
+            <picture>
+              <source type="image/webp" media="(min-width: 1366px)" srcset="./img/photo-games-desktop.webp 1x, ./img/photo-games-desktop@2x.webp 2x" width="660" height="500">
               <source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-games-tablet.webp 1x, ./img/photo-games-tablet@2x.webp 2x" width="378" height="348">
               <source type="image/webp" srcset="./img/photo-games.webp 1x, ./img/photo-games@2x.webp 2x" width="290" height="290">
               <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/photo-games-desktop.jpg 1x, ./img/photo-games-desktop@2x.jpg 2x" width="660" height="500">
@@ -240,13 +248,13 @@
                 <source type="image/webp" srcset="./img/slide-3.webp 1x, ./img/slide-3@2x.webp 2x" width="227" height="280">
                 <img src="./img/slide-3.jpg" srcset="./img/slide-3@2x.jpg" alt="Анна Павлова - член жюри." width="227" height="280" loading="lazy">
               </picture>
-              <div class="jury__info">
-                <h4>Анна Павлова</h4>
-                <h5>CrossFit</h5>
-                <ul>
-                  <li>Certified Level 3 Trainer</li>
-                  <li>Победитель чемпионата России по CrossFit</li>
-                  <li>Опыт — 6 лет</li>
+              <div class="jury__info info-card">
+                <h4 class="info-card__title">Анна Павлова</h4>
+                <h5 class="info-card__subtitle">CrossFit</h5>
+                <ul class="info-card__list">
+                  <li class="info-card__item">Certified Level 3 Trainer</li>
+                  <li class="info-card__item">Победитель чемпионата России по CrossFit</li>
+                  <li class="info-card__item">Опыт — 6 лет</li>
                 </ul>
               </div>
             </li>
@@ -257,13 +265,13 @@
                 <source type="image/webp" srcset="./img/slide-2.webp 1x, ./img/slide-2@2x.webp 2x" width="227" height="280">
                 <img src="./img/slide-2.jpg" srcset="./img/slide-2@2x.jpg" alt="Алексей Лавров - член жюри." width="227" height="280" loading="lazy">
               </picture>
-              <div class="jury__info">
-                <h4>Алексей Лавров</h4>
-                <h5>CrossFit</h5>
-                <ul>
-                  <li>Certified Level 2 Trainer</li>
-                  <li>Победитель чемпионата Европы по CrossFit</li>
-                  <li>Опыт — 5 лет</li>
+              <div class="jury__info info-card">
+                <h4 class="info-card__title">Алексей Лавров</h4>
+                <h5 class="info-card__subtitle">CrossFit</h5>
+                <ul class="info-card__list">
+                  <li class="info-card__item">Certified Level 2 Trainer</li>
+                  <li class="info-card__item">Победитель чемпионата Европы по CrossFit</li>
+                  <li class="info-card__item">Опыт — 5 лет</li>
                 </ul>
               </div>
             </li>
@@ -271,16 +279,18 @@
             <li class="jury__slide swiper-slide">
                 <h3 class="jury__slide-title">Александр Пашков</h3>
                 <picture>
+                  <source type="image/webp" srcset="./img/slide-1-tablet.webp 1x, ./img/slide-1-tablet@2x.webp 2x" width="260" height="300">
+                  <source type="image/jpg" media="(min-width: 768px)" srcset="./img/slide-1-tablet.jpg 1x, ./img/slide-1-tablet@2x.jpg 2x" width="260" height="300">
                   <source type="image/webp" srcset="./img/slide-1.webp 1x, ./img/slide-1@2x.webp 2x" width="227" height="280">
                   <img src="./img/slide-1.jpg" srcset="./img/slide-1@2x.jpg" alt="Александр Пашков - член жюри." width="227" height="280" loading="lazy">
                 </picture>
-                <div class="jury__info">
-                  <h4>Александр Пашков</h4>
-                  <h5>CrossFit</h5>
-                  <ul>
-                    <li>Certified Level 5 Trainer</li>
-                    <li>Победитель чемпионата Свердловской области по CrossFit</li>
-                    <li>Опыт — 4 года</li>
+                <div class="jury__info info-card">
+                  <h4 class="info-card__title">Александр Пашков</h4>
+                  <h5 class="info-card__subtitle">CrossFit</h5>
+                  <ul class="info-card__list">
+                    <li class="info-card__item">Certified Level 5 Trainer</li>
+                    <li class="info-card__item">Победитель чемпионата Свердловской области по CrossFit</li>
+                    <li class="info-card__item">Опыт — 4 года</li>
                   </ul>
                 </div>
             </li>
@@ -291,13 +301,13 @@
                   <source type="image/webp" srcset="./img/slide-4.webp 1x, ./img/slide-4@2x.webp 2x" width="227" height="280">
                   <img src="./img/slide-4.jpg" srcset="./img/slide-4@2x.jpg" alt="Мария Кетова - член жюри." width="227" height="280" loading="lazy">
                 </picture>
-                <div class="jury__info">
-                  <h4>Мария Кетова</h4>
-                  <h5>Пилатес</h5>
-                  <ul>
-                    <li>Certified Level 12 Trainer</li>
-                    <li>Победитель чемпионата мира по пилатесу</li>
-                    <li>Опыт — 8 лет</li>
+                <div class="jury__info info-card">
+                  <h4 class="info-card__title">Мария Кетова</h4>
+                  <h5 class="info-card__subtitle">Пилатес</h5>
+                  <ul class="info-card__list">
+                    <li class="info-card__item">Certified Level 12 Trainer</li>
+                    <li class="info-card__item">Победитель чемпионата мира по пилатесу</li>
+                    <li class="info-card__item">Опыт — 8 лет</li>
                   </ul>
                 </div>
             </li>
@@ -308,13 +318,13 @@
                 <source type="image/webp" srcset="./img/slide-5-1.webp 1x, ./img/slide-5-1@2x.webp 2x" width="227" height="280">
                 <img src="./img/slide-5-1.jpg" srcset="./img/slide-5-1@2x.jpg" alt="Анна Павлова - член жюри." width="227" height="280" loading="lazy">
               </picture>
-              <div class="jury__info">
-                <h4>Алексей Лавров</h4>
-                <h5>CrossFit</h5>
-                <ul>
-                  <li>Certified Level 2 Trainer</li>
-                  <li>Победитель чемпионата Европы по CrossFit</li>
-                  <li>Опыт — 5 лет</li>
+              <div class="jury__info info-card">
+                <h4 class="info-card__title">Анна Павлова</h4>
+                <h5 class="info-card__subtitle">CrossFit</h5>
+                <ul class="info-card__list">
+                  <li class="info-card__item">Certified Level 2 Trainer</li>
+                  <li class="info-card__item">Победитель чемпионата Европы по CrossFit</li>
+                  <li class="info-card__item">Опыт — 5 лет</li>
                 </ul>
               </div>
             </li>
@@ -325,13 +335,13 @@
                 <source type="image/webp" srcset="./img/slide-2.webp 1x, ./img/slide-2@2x.webp 2x" width="227" height="280">
                 <img src="./img/slide-2.jpg" srcset="./img/slide-2@2x.jpg" alt="Алексей Лавров - член жюри." width="227" height="280" loading="lazy">
               </picture>
-              <div class="jury__info">
-                <h4>Алексей Лавров</h4>
-                <h5>CrossFit</h5>
-                <ul>
-                  <li>Certified Level 2 Trainer</li>
-                  <li>Победитель чемпионата Европы по CrossFit</li>
-                  <li>Опыт — 5 лет</li>
+              <div class="jury__info info-card">
+                <h4 class="info-card__title">Алексей Лавров</h4>
+                <h5 class="info-card__subtitle">CrossFit</h5>
+                <ul class="info-card__list">
+                  <li class="info-card__item">Certified Level 2 Trainer</li>
+                  <li class="info-card__item">Победитель чемпионата Европы по CrossFit</li>
+                  <li class="info-card__item">Опыт — 5 лет</li>
                 </ul>
               </div>
             </li>
@@ -342,13 +352,13 @@
                 <source type="image/webp" srcset="./img/slide-1.webp 1x, ./img/slide-1@2x.webp 2x" width="227" height="280">
                 <img src="./img/slide-1.jpg" srcset="./img/slide-1@2x.jpg" alt="Александр Пашков - член жюри." width="227" height="280" loading="lazy">
               </picture>
-              <div class="jury__info">
-                <h4>Александр Пашков</h4>
-                <h5>CrossFit</h5>
-                <ul>
-                  <li>Certified Level 5 Trainer</li>
-                  <li>Победитель чемпионата Свердловской области по CrossFit</li>
-                  <li>Опыт — 4 года</li>
+              <div class="jury__info info-card">
+                <h4 class="info-card__title">Александр Пашков</h4>
+                <h5 class="info-card__subtitle">CrossFit</h5>
+                <ul class="info-card__list">
+                  <li class="info-card__item">Certified Level 5 Trainer</li>
+                  <li class="info-card__item">Победитель чемпионата Свердловской области по CrossFit</li>
+                  <li class="info-card__item">Опыт — 4 года</li>
                 </ul>
               </div>
             </li>
@@ -359,13 +369,13 @@
                 <source type="image/webp" srcset="./img/slide-1-1.webp 1x, ./img/slide-1-1@2x.webp 2x" width="227" height="280">
                 <img src="./img/slide-1-1.jpg" srcset="./img/slide-1-1@2x.jpg" alt="Мария Кетова - член жюри." width="227" height="280" loading="lazy">
               </picture>
-              <div class="jury__info">
-                <h4>Анна Павлова</h4>
-                <h5>CrossFit</h5>
-                <ul>
-                  <li>Certified Level 3 Trainer</li>
-                  <li>Победитель чемпионата России по CrossFit</li>
-                  <li>Опыт — 6 лет</li>
+              <div class="jury__info info-card">
+                <h4 class="info-card__title">Мария Кетова</h4>
+                <h5 class="info-card__subtitle">CrossFit</h5>
+                <ul class="info-card__list">
+                  <li class="info-card__item">Certified Level 3 Trainer</li>
+                  <li class="info-card__item">Победитель чемпионата России по CrossFit</li>
+                  <li class="info-card__item">Опыт — 6 лет</li>
                 </ul>
               </div>
             </li>
@@ -604,7 +614,7 @@
                       <source type="image/webp" media="(min-width: 768px)" srcset="./img/review-tablet.webp 1x, ./img/review-tablet@2x.webp 2x" width="80" height="80">
                       <source type="image/webp" srcset="./img/review.webp 1x, ./img/review@2x.webp 2x" width="68" height="68">
                       <source type="image/jpg" media="(min-width: 768px)" srcset="./img/review-tablet.jpg 1x, ./img/review-tablet@2x.jpg 2x" width="80" height="80">
-                      <img src="./img/review.jpg" srcset="./img/review@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                      <img src="./img/review.jpg" srcset="./img/review@2x.jpg" alt="Анна Орлова." width="68" height="68" loading="lazy">
                     </picture>
                   </div>
                 </li>
@@ -615,7 +625,7 @@
                   <div>
                     <picture>
                       <source type="image/webp" srcset="./img/review-2.webp 1x, ./img/review-2@2x.webp 2x" width="68" height="68">
-                      <img src="./img/review-2.jpg" srcset="./img/review-2@2x.jpg" alt="Анна Орлова." width="68" height="68">
+                      <img src="./img/review-2.jpg" srcset="./img/review-2@2x.jpg" alt="Анна Орлова." width="68" height="68" loading="lazy">
                     </picture>
                   </div>
                 </li>
@@ -671,7 +681,7 @@
                   </label>
                 </li>
                 <li class="form__item form__item--button">
-                  <button class="input input--submit" type="submit">Отправить</button>
+                  <button class="button button--submit" type="submit">Отправить</button>
                 </li>
               </ul>
 

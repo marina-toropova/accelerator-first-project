@@ -6,7 +6,7 @@ const errorTextPhone = phoneInputField.nextElementSibling;
 const errorTextName = nameInputField.nextElementSibling;
 const phoneRegExp = /^[ 0-9]+$/;
 const validateRegex = /^[a-zA-ZА-ЯЁа-яё ]*$/;
-const submitButton = document.querySelector('.input--submit');
+const submitButton = document.querySelector('.button--submit');
 
 function showErrorPhone() {
   if (phoneInputField.validity.valueMissing) {

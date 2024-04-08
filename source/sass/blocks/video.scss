@@ -95,9 +95,11 @@
   }
 }
 
-.video__image {
-  @media (max-width: $only-mobile) {
-    max-width: none;
+.video__link {
+  img {
+    @media (max-width: $only-mobile) {
+      max-width: none;
+    }
   }
 }
 

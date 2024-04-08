@@ -112,6 +112,12 @@
   @media (min-width: $desktop) {
     grid-area: photo;
   }
+
+  img {
+    @media (max-width: $only-mobile) {
+      max-width: none;
+    }
+  }
 }
 
 .gym__video-container {
@@ -130,11 +136,5 @@
 
   @media (min-width: $desktop) {
     bottom: 121px;
-  }
-}
-
-.gym__image {
-  @media (max-width: $only-mobile) {
-    max-width: none;
   }
 }
